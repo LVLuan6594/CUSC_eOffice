@@ -1,0 +1,217 @@
+:root {
+    --primary: #1E3A8A;
+    --accent: #F97316;
+    --bg-light: #F3F4F6;
+    --bg-dark: #1F2937;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+    background: var(--bg-dark);
+    color: #E5E7EB;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+    background: var(--accent);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: #EA580C;
+    transform: scale(1.05);
+}
+
+.typing::after {
+    content: '|';
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Fix for Swiper container */
+.swiper-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Make sure navigation buttons stay within bounds */
+.swiper-button-prev, 
+.swiper-button-next {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: 18px;
+}
+
+/* Make sure pagination stays within bounds */
+.swiper-pagination {
+    position: absolute;
+    bottom: 20px;
+}
+
+/* Ensure the button has proper styling */
+.btn-primary {
+    background-color: #2563eb;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+.dark .card {
+    background: #374151;
+    border-color: #4B5563;
+}
+
+.dark .text-gray-700 {
+    color: #D1D5DB;
+}
+
+.dark .bg-gray-100 {
+    background: #2D3748;
+}
+
+/*...........*/
+
+header.scrolled {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  header .flex-col {
+    align-items: center;
+  }
+}
+/* Features carousel styles */
+.features-carousel-container {
+    overflow: hidden;
+    margin: 0 -1rem; /* Compensate for the padding in feature cards */
+}
+
+.features-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.feature-card {
+    height: 100%;
+}
+
+.features-dot {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.features-dot.active {
+    transform: scale(1.2);
+}
+
+
+/* Tab Navigation Styles */
+.tab-nav {
+    position: relative;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tab-btn {
+    position: relative;
+    color: #4b5563;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    color: #2563eb;
+}
+
+.tab-btn.active {
+    color: #2563eb;
+}
+
+.tab-btn.active .tab-indicator {
+    transform: scaleX(1);
+}
+
+.tab-indicator {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #2563eb;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+/* Tab Content Styles */
+.tab-content {
+    position: relative;
+    min-height: 500px; /* Set a minimum height to prevent layout shifts */
+}
+
+.tab-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.tab-panel.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tab-btn {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.875rem;
+    }
+}

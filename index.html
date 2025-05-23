@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Office - Văn phòng Điện tử Chuyên nghiệp | CUSC</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<header class="bg-white shadow-md border-t-4 border-blue-600 py-4 sticky top-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
+        <div class="flex items-center mb-4 md:mb-0">
+            <img src="/image/CUSC Logo Series.png" alt="CUSC Logo" class="h-14 mr-4">
+            <div>
+                <h1 class="text-xl font-bold text-blue-800 leading-tight">TRUNG TÂM CÔNG NGHỆ PHẦN MỀM</h1>
+                <p class="text-sm text-blue-600">TRƯỜNG ĐẠI HỌC CẦN THƠ</p>
+            </div>
+        </div>
+        <nav class="flex flex-wrap justify-center md:justify-end space-x-2 md:space-x-6">
+            <a href="#" class="font-medium py-2 px-3 rounded-lg transition-colors flex items-center text-[#2250fc] hover:text-blue-700 hover:bg-blue-50">
+                <span>PHẦN MỀM</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </a>
+            <a href="#" class="font-medium py-2 px-3 rounded-lg transition-colors flex items-center text-[#2250fc] hover:text-blue-700 hover:bg-blue-50">
+                <span>ĐÀO TẠO</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </a>
+            <a href="#" class="font-medium py-2 px-3 rounded-lg transition-colors flex items-center text-[#2250fc] hover:text-blue-700 hover:bg-blue-50">
+                <span>GIỚI THIỆU</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </a>
+        </nav>
+        <div class="flex items-center mt-4 md:mt-0">
+            <img src="image/search-status.png" alt="search-status" class="h-6">
+            <div class="h-6 mx-3 border-l border-gray-300 dark:border-gray-600"></div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" alt="Vietnam Flag" class="h-6">
+            <div class="h-6 mx-3 border-l border-gray-300 dark:border-gray-600"></div>
+            <button id="theme-toggle" class="h-6 flex items-center justify-center">
+                <svg class="w-6 h-6 text-gray-800 dark:text-gray-200" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" />
+                </svg>
+            </button>   
+        </div>
+    </div>
+</header>
+<body class="antialiased">
+ 
+
+    <!-- Hero Section -->
+    <section class="swiper-container min-h-screen">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide bg-cover bg-center" style="background-image: url('/image/banner1.png')">
+                <div class="flex items-center justify-center h-screen text-white text-center px-4">
+                    <div>
+                        <h1 class="text-5xl md:text-6xl font-bold font-poppins mb-4">
+                            <span id="typing-text" class="typing">e-Office: Chuyển đổi số</span>
+                        </h1>
+                        <p class="text-xl md:text-2xl mb-6">Tối ưu hóa quy trình văn phòng, hướng tới tương lai không giấy.</p>
+                        <a href="#support" class="btn-primary text-white py-3 px-8 rounded-lg text-lg font-semibold">Dùng thử miễn phí</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div class="flex items-center justify-center h-screen text-white text-center px-4 relative z-10">
+                    <div class="max-w-4xl mx-auto">
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold font-poppins mb-4">
+                            <span id="typing-text-2" class="typing">Văn phòng thông minh</span>
+                        </h1>
+                        <p class="text-lg sm:text-xl md:text-2xl mb-6">Quản lý văn bản, lịch biểu dễ dàng trên mọi thiết bị.</p>
+                        <a href="#support" class="btn-primary text-white py-3 px-8 rounded-lg text-lg font-semibold inline-block">Liên hệ ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </section>
+
+
+
+    <!-- Introduction -->
+    <section id="introduction" class="py-20 max-w-6xl mx-auto px-4" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-blue-700 dark:text-white font-poppins mb-8 text-center">GIỚI THIỆU E-OFFICE</h2>
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-4">
+                    <strong>e-Office</strong> là giải pháp văn phòng điện tử tiên tiến, giúp số hóa quy trình xử lý văn bản, quản lý lịch biểu, và tối ưu hóa hiệu suất làm việc.
+                </p>
+                <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
+                    Với giao diện thân thiện và hỗ trợ đa nền tảng, e-Office hướng tới mô hình "Phòng họp không giấy", góp phần vào chuyển đổi số 4.0.
+                </p>
+                <a href="#support" class="btn-primary text-white py-3 px-8 rounded-lg text-lg font-semibold">Khám phá ngay</a>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="e-Office" class="rounded-xl shadow-lg">
+            </div>
+        </div>
+    </section>
+
+<!-- Features -->
+<section id="features" class="py-10 max-w-6xl mx-auto px-4" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-blue-700 mb-2 text-center font-poppins">TẠI SAO CHỌN CHÚNG TÔI</h2>
+    <p class="text-gray-600 mb-12 max-w-2xl mx-auto text-center">
+       Xây dựng theo dạng Portal trên nền tảng công nghệ mã nguồn mở PostgreSQL theo khuyến khích của Bộ Thông tin và Truyền thông.
+    </p>
+    
+    <!-- Features Carousel Container -->
+    <div class="features-carousel-container relative overflow-hidden">
+        <!-- Features Track - This will slide horizontally -->
+        <div class="features-track flex transition-transform duration-500 ease-in-out">
+            <!-- Feature 1 -->
+            <div class="feature-card w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-4">
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600 flex flex-col items-center text-center h-full">
+                    <div class="w-20 h-20 bg-teal-500 rounded-full flex items-center justify-center mb-4">
+                        <img src="/image/expand-fullscreen-svgrepo-com.svg" alt="">
+                            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h16v12zM6 10h2v2H6v-2zm0 4h8v2H6v-2zm10 0h2v2h-2v-2zm-6-4h8v2h-8v-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Dễ dàng mở rộng</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-base">Kiến trúc module cho phép mở rộng quy mô linh hoạt.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="feature-card w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-4">
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600 flex flex-col items-center text-center h-full">
+                    <div class="w-20 h-20 bg-blue-300 rounded-full flex items-center justify-center mb-4">
+                        <img src="image/monitor-tv-svgrepo-com.svg" alt="">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Thao tác đơn giản</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-base">Giao diện người dùng thân thiện, trực quan.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="feature-card w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-4">
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600 flex flex-col items-center text-center h-full">
+                    <div class="w-20 h-20 rounded-full flex items-center justify-center mb-4">
+                        <img src="/image/automation-svgrepo-com.svg" alt="">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Tự động hóa</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-base">Tự động hóa xử lý văn bản, tiết kiệm thời gian.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 4 -->
+            <div class="feature-card w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-4">
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600 flex flex-col items-center text-center h-full">
+                    <div class="w-20 h-20 bg-teal-500 rounded-full flex items-center justify-center mb-4">
+                        <a href="#" class="w-20 h-20 bg-center bg-no-repeat bg-contain mb-4" style="background-image: url('https://vedunet.vn//Upload/Section/Attr/MoiLuc.svg');"></a>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Đa nền tảng</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-base">Hỗ trợ đa nền tảng, truy cập dễ dàng mọi lúc.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 5 -->
+            <div class="feature-card w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-4">
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600 flex flex-col items-center text-center h-full">
+                    <div class="w-20 h-20 rounded-full flex items-center justify-center mb-4">
+                        <a href="#" class="w-20 h-20 bg-center bg-no-repeat bg-contain mb-4" style="background-image: url('https://vedunet.vn//Upload/Section/Attr/BaoMat.svg');"></a>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Bảo mật cao</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-base">Bảo mật đa lớp, mã hóa dữ liệu an toàn.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 6 -->
+            <div class="feature-card w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-4">
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600 flex flex-col items-center text-center h-full">
+                    <div class="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mb-4">
+                       <img src="image/telephone-phone-svgrepo-com.svg" alt="">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Hỗ trợ 24/7</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-base">Luôn sẵn sàng giải đáp và xử lý sự cố.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation Dots -->
+    <div class="flex justify-center mt-8 space-x-2">
+        <button class="features-dot active w-3 h-3 rounded-full bg-blue-600" data-slide="0"></button>
+        <button class="features-dot w-3 h-3 rounded-full bg-gray-300" data-slide="1"></button>
+    </div>
+</section>
+
+
+    <!-- Features Section -->
+
+
+    <!-- Overview -->
+<!-- Overview -->
+<section id="overview" class="py-10 max-w-6xl mx-auto px-4" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-blue-800 dark:text-white font-poppins mb-5 text-center">MÔ HÌNH TỔNG QUAN</h2>
+    <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed text-center mb-5 max-w-3xl mx-auto">
+        e-Office tích hợp quản lý văn bản đến/đi, lịch công tác, và báo cáo thông minh, mang lại hiệu quả vượt trội cho doanh nghiệp.
+    </p>
+    <div class="tabs-container">
+        <!-- Tab Buttons -->
+        <!-- <div class="tabs flex justify-center space-x-4 mb-6">
+            <button class="tab-btn bg-purple-500 text-white py-2 px-4 rounded-lg hover:bg-purple-600 transition-colors active" data-tab="tab1">GIAO DIỆN</button>
+            <button class="tab-btn bg-purple-500 text-white py-2 px-4 rounded-lg hover:bg-purple-600 transition-colors" data-tab="tab2">XỬ LÝ VĂN BẢN ĐẾN</button>
+            <button class="tab-btn bg-purple-500 text-white py-2 px-4 rounded-lg hover:bg-purple-600 transition-colors" data-tab="tab3">XỬ LÝ VĂN BẢN ĐI</button>
+            <button class="tab-btn bg-purple-500 text-white py-2 px-4 rounded-lg hover:bg-purple-600 transition-colors" data-tab="tab4">ĐĂNG KÝ LỊCH CÔNG TÁC</button>
+        </div> -->
+        <!-- Tab Content -->
+        <div class="tabs-container max-w-6xl mx-auto px-2 py-4">
+    <!-- Tab Navigation Bar -->
+    <div class="tab-nav bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden mb-8">
+        <div class="flex flex-wrap">
+            <button class="tab-btn flex-1 py-4 px-4 text-center font-medium border-b-2 border-transparent hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative active" data-tab="tab1">
+                GIAO DIỆN
+                <span class="tab-indicator absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-300"></span>
+            </button>
+            <button class="tab-btn flex-1 py-4 px-4 text-center font-medium border-b-2 border-transparent hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative" data-tab="tab2">
+                XỬ LÝ VĂN BẢN ĐẾN
+                <span class="tab-indicator absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-300"></span>
+            </button>
+            <button class="tab-btn flex-1 py-4 px-4 text-center font-medium border-b-2 border-transparent hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative" data-tab="tab3">
+                XỬ LÝ VĂN BẢN ĐI
+                <span class="tab-indicator absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-300"></span>
+            </button>
+            <button class="tab-btn flex-1 py-4 px-4 text-center font-medium border-b-2 border-transparent hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative" data-tab="tab4">
+                ĐĂNG KÝ LỊCH CÔNG TÁC
+                <span class="tab-indicator absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-300"></span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Tab Content with Smooth Transitions -->
+    <div class="tab-content relative overflow-hidden rounded-lg shadow-lg">
+        <!-- Tab 1 Content -->
+        <div class="tab-panel absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out" id="tab1">
+            <img src="image/giaodien.png" alt="Giao diện" class="w-90 h-auto">
+        </div>
+        
+        <!-- Tab 2 Content -->
+        <div class="tab-panel absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out" id="tab2">
+            <img src="image/vb-den-1440x695 (1).jpg" alt="Xử lý văn bản đến" class="w-90 h-auto">
+        </div>
+        
+        <!-- Tab 3 Content -->
+        <div class="tab-panel absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out" id="tab3">
+            <img src="image/quy-trinh-xu-ly-van-ban-di-1440x837.jpg" alt="Xử lý văn bản đi" class="w-90 h-auto">
+        </div>
+        
+        <!-- Tab 4 Content -->
+        <div class="tab-panel absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out" id="tab4">
+            <img src="image/vb-di.jpg" alt="Đăng ký lịch công tác" class="w-90 h-auto">
+        </div>
+    </div>
+</div>
+</section>
+    <!-- Functions -->
+    <section id="functions" class="py-20 bg-gray-100 dark:bg-gray-800 max-w-6xl mx-auto px-4" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-blue-700 mb-2 text-center font-poppins">CÁC CHỨC NĂNG CHÍNH</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="card bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600">
+                <svg class="w-10 h-10 text-orange-500 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" /></svg>
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3">Quản trị hệ thống</h3>
+                <p class="text-gray-700 dark:text-gray-300">Quản lý quyền, danh mục, sổ văn bản.</p>
+            </div>
+            <div class="card bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600">
+                <svg class="w-10 h-10 text-orange-500 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 3a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" /></svg>
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3">Lịch biểu công tác</h3>
+                <p class="text-gray-700 dark:text-gray-300">Cập nhật, đăng ký, duyệt lịch họp.</p>
+            </div>
+            <div class="card bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600">
+                <svg class="w-10 h-10 text-orange-500 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2. Stomach4L6.8 7.933c-.8.733-1.2 1.667-1.2 2.4z" /></svg>
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3">Xử lý văn bản</h3>
+                <p class="text-gray-700 dark:text-gray-300">Tiếp nhận, xử lý, tìm kiếm văn bản đến/đi.</p>
+            </div>
+            <div class="card bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600">
+                <svg class="w-10 h-10 text-orange-500 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 0v12h8V4H6zm2 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1zm0 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1zm0 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd" /></svg>
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3">Báo cáo thông minh</h3>
+                <p class="text-gray-700 dark:text-gray-300">Tổng hợp tình hình xử lý văn bản.</p>
+            </div>
+            <div class="card bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600">
+                <svg class="w-10 h-10 text-orange-500 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" /></svg>
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3">Điều hành - Giao việc</h3>
+                <p class="text-gray-700 dark:text-gray-300">Phân công, theo dõi tiến độ công việc.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video -->
+    <section id="video" class="py-20 max-w-6xl mx-auto px-4" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-blue-700 mb-2 text-center font-poppins">KHÁM PHÁ E-OFFICE</h2>
+        <div class="relative" style="padding-top: 56.25%;">
+            <iframe class="absolute inset-0 w-full h-full rounded-xl shadow-lg"
+                src="https://www.youtube.com/embed/yF-t2D6Vk3E"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <p class="text-gray-700 dark:text-gray-300 text-lg text-center mt-6 max-w-3xl mx-auto">
+            Xem cách e-Office giúp doanh nghiệp của bạn chuyển đổi số nhanh chóng và hiệu quả.
+        </p>
+        <div class="text-center mt-6">
+            <a href="#support" class="btn-primary text-white py-3 px-8 rounded-lg text-lg font-semibold">Liên hệ để demo</a>
+        </div>
+    </section>
+
+    <!-- Technical -->
+    <section id="technical" class="py-20 bg-gray-100 dark:bg-gray-800 max-w-6xl mx-auto px-4" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-blue-700 mb-2 text-center font-poppins">CÔNG NGHỆ & BẢO MẬT</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600">
+                <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Nền tảng kỹ thuật</h3>
+                <ul class="text-gray-700 dark:text-gray-300 text-lg space-y-3">
+                    <li><strong>CSDL:</strong> PostgreSQL, MySQL, Oracle</li>
+                    <li><strong>Nền tảng:</strong> Web, hỗ trợ tiếng Việt (TCVN 6909:2001)</li>
+                    <li><strong>Thiết bị:</strong> iOS 10.0+, Android 8.0+</li>
+                    <li><strong>Trình duyệt:</strong> Chrome, Firefox, Edge (50+)</li>
+                </ul>
+            </div>
+            <div class="card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600">
+                <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Bảo mật tối ưu</h3>
+                <ul class="text-gray-700 dark:text-gray-300 text-lg space-y-3">
+                    <li>Xác thực đạt chuẩn quốc tế</li>
+                    <li>Sao lưu định kỳ, mã hóa dữ liệu</li>
+                    <li>Bảo vệ thông tin nhạy cảm</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support -->
+    <section id="support" class="py-20 max-w-6xl mx-auto px-4" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-blue-700 mb-2 text-center font-poppins">HỖ TRỢ CHUYÊN NGHIỆP</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600">
+                <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Bảo hành & Bảo trì</h3>
+                <ul class="text-gray-700 dark:text-gray-300 text-lg space-y-3">
+                    <li><strong>Thời gian:</strong> 12 tháng từ ngày nghiệm thu</li>
+                    <li><strong>Hình thức:</strong> Bảo hành tận nơi</li>
+                    <li><strong>Nội dung:</strong> Bảo trì 2 lần/năm, xử lý sự cố</li>
+                </ul>
+            </div>
+            <div class="card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600">
+                <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Kênh hỗ trợ</h3>
+                <ul class="text-gray-700 dark:text-gray-300 text-lg space-y-3">
+                    <li>Hotline: <a href="tel:02923731072" class="text-orange-500 hover:underline">0292 3731072 - 530</a></li>
+                    <li>Website: <a href="http://support.cuscsoft.com:8080/redmine/" target="_blank" class="text-orange-500 hover:underline">support.cuscsoft.com</a></li>
+                    <li>Email: <a href="mailto:support.cusc@ctu.edu.vn" class="text-orange-500 hover:underline">support.cusc@ctu.edu.vn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <a href="mailto:support.cusc@ctu.edu.vn" class="btn-primary text-white py-3 px-8 rounded-lg text-lg font-semibold">Gửi yêu cầu hỗ trợ</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-12 text-center">
+        <div class="max-w-6xl mx-auto px-4">
+            <img src="image/CUSC Logo Series.png" alt="CUSC Logo" class="mx-auto h-16 mb-6">
+            <p class="text-lg font-poppins">Trung tâm Công nghệ Phần mềm Đại học Cần Thơ</p>
+            <p class="mt-2">01 Lý Tự Trọng, P. An Phú, Q. Ninh Kiều, TP. Cần Thơ</p>
+            <p class="mt-2">Hotline: <a href="tel:02923731072" class="hover:text-orange-400">0292 3731072 - 500</a></p>
+            <p class="mt-2">Email: <a href="mailto:cusc@ctu.edu.vn" class="hover:text-orange-400">cusc@ctu.edu.vn</a> | Website: <a href="http://www.cusc.ctu.edu.vn" class="hover:text-orange-400">www.cusc.ctu.edu.vn</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script>
+</body>
+</html>
