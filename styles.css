@@ -4,6 +4,159 @@
     --bg-light: #F3F4F6;
     --bg-dark: #1F2937;
 }
+/* Background giống hệt functions section cho toàn bộ website */
+body {
+    background: linear-gradient(135deg, #f8fafc 0%, #dbeafe 30%, #e0e7ff 60%, #fce7f3 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    min-height: 100vh;
+}
+
+/* Dark mode */
+.dark body {
+    background: linear-gradient(135deg, #111827 0%, #1e293b 30%, #111827 60%, #1f2937 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+/* Animation cho background */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Đảm bảo các pattern background cũ không hiển thị */
+#functions::before {
+    display: none;
+}
+
+
+/* Enhanced Navbar with Better Contrast */
+.navbar-glass {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Dark mode navbar with better visibility */
+.dark .navbar-glass {
+    background: rgba(31, 41, 55, 0.95); /* gray-800 with transparency */
+    border-bottom: 1px solid rgba(75, 85, 99, 0.5); /* gray-600 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Navigation Link Styles */
+.nav-link {
+    position: relative;
+    padding: 0.75rem 0;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    transform: translateY(-1px);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ea580c, #f97316);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 1px;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Dark Mode Toggle Enhanced */
+#theme-toggle {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.05);
+}
+
+#theme-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .navbar-glass {
+        padding: 1.25rem 1rem;
+        background: rgba(255, 255, 255, 0.98);
+    }
+    
+    .dark .navbar-glass {
+        background: rgba(31, 41, 55, 0.98);
+    }
+    
+    .nav-link {
+        font-size: 0.8rem;
+        padding: 0.5rem 0;
+    }
+    
+    nav ul {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #theme-toggle {
+        top: 1rem;
+        right: 1rem;
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 640px) {
+    nav ul {
+        gap: 1rem;
+    }
+    
+    .nav-link {
+        font-size: 0.75rem;
+    }
+}
+
+/* Active Navigation State */
+.nav-link.active {
+    color: #ea580c !important;
+}
+
+.dark .nav-link.active {
+    color: #f97316 !important;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Smooth transitions for theme switching */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Better focus states for accessibility */
+.nav-link:focus,
+#theme-toggle:focus {
+    outline: 2px solid #f97316;
+    outline-offset: 2px;
+}
+
+
+
 
 body {
     font-family: 'Inter', sans-serif;
@@ -87,6 +240,106 @@ body.dark {
     position: absolute;
     bottom: 20px;
 }
+
+/*Funcition CacChucNangChinh
+/* Functions Section Enhanced Styles */
+#functions {
+    position: relative;
+    overflow: hidden;
+}
+
+#functions::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Function Cards Enhanced */
+.function-card {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.function-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    border-radius: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.function-card:hover::before {
+    opacity: 1;
+}
+
+/* Staggered Animation */
+.function-card:nth-child(1) { animation-delay: 0.1s; }
+.function-card:nth-child(2) { animation-delay: 0.2s; }
+.function-card:nth-child(3) { animation-delay: 0.3s; }
+.function-card:nth-child(4) { animation-delay: 0.4s; }
+.function-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #functions .grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    #functions .rounded-2xl {
+        padding: 1.5rem;
+    }
+    
+    #functions h2 {
+        font-size: 2.5rem;
+    }
+    
+    #functions .w-16 {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    #functions h2 {
+        font-size: 2rem;
+    }
+    
+    #functions .text-xl {
+        font-size: 1.125rem;
+    }
+}
+
+/* Dark mode enhancements */
+.dark #functions {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+}
+
+/* Hover effects for better interactivity */
+.function-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.dark .function-card:hover {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+
+
 
 /* Ensure the button has proper styling */
 .btn-primary {
