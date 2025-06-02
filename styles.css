@@ -12,6 +12,12 @@ body {
     min-height: 100vh;
 }
 
+.bold-text {
+  font-weight: bold;
+}
+
+
+
 /* Dark mode */
 .dark body {
     background: linear-gradient(135deg, #111827 0%, #1e293b 30%, #111827 60%, #1f2937 100%);
