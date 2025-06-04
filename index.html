@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="vi" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>e-Office - Văn phòng Điện tử Chuyên nghiệp | CUSC</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>e-Office - Văn phòng Điện tử Chuyên nghiệp | CUSC</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
     <!-- Header Container -->
     <header class="sticky top-0 z-50">
         <!-- Dark Mode Toggle -->
@@ -73,723 +74,779 @@
         </nav>
     </header>
 
-<body class="antialiased bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-slate-900 dark:to-gray-800">
-    <!-- Hero Section -->
-    <section class="swiper-container min-h-screen">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide bg-cover bg-center" style="background-image: url('image/banner1.png')">
-                <div class="flex items-center justify-center h-screen text-white text-center px-4">
-                    <div>
-                        <h1 class="text-5xl md:text-6xl font-bold font-poppins mb-4">
-                            <span id="typing-text" class="typing">e-Office: Chuyển đổi số</span>
-                        </h1>
-                        <p class="text-xl md:text-2xl mb-6">Tối ưu hóa quy trình văn phòng, hướng tới tương lai không giấy.</p>
-                        <a href="#support" class="btn-primary text-white py-3 px-8 rounded-lg text-lg font-semibold">Dùng thử miễn phí</a>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
-                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-                <div class="flex items-center justify-center h-screen text-white text-center px-4 relative z-10">
-                    <div class="max-w-4xl mx-auto">
-                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold font-poppins mb-4">
-                            <span id="typing-text-2" class="typing">Văn phòng thông minh</span>
-                        </h1>
-                        <p class="text-lg sm:text-xl md:text-2xl mb-6">Quản lý văn bản, lịch biểu dễ dàng trên mọi thiết bị.</p>
-                        <a href="#support" class="btn-primary text-white py-3 px-8 rounded-lg text-lg font-semibold inline-block">Liên hệ ngay</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-    </section>
-
-
-    <!-- Introduction -->
-    <section id="introduction" class="py-20 max-w-6xl mx-auto px-4" data-aos="fade-up">
-        <h2 class="text-4xl md:text-3xl font-bold bg-gradient-to-r from-blue-700 via-purple-600 to-blue-800 bg-clip-text text-transparent mb-8 text-center font-poppins">GIỚI THIỆU E-OFFICE & CÁC GIẢI PHÁP ĐỘT PHÁ</h2>
-        
-        <!-- Phần giới thiệu chính -->
-        <!-- Phần giới thiệu chính -->
-<div class="flex flex-col md:flex-row items-center gap-12 mb-20 max-w-7xl mx-auto px-4">
-    <!-- Nội dung giới thiệu -->
-    <div class="md:w-1/2 text-center md:text-left">
-        <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-4">
-            <strong class="text-blue-700 dark:text-blue-400">e-Office</strong> là giải pháp văn phòng điện tử tiên tiến, giúp số hóa quy trình xử lý văn bản, quản lý lịch biểu và tối ưu hóa hiệu suất làm việc.
-        </p>
-        <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
-            Với giao diện thân thiện và hỗ trợ đa nền tảng, <span class="text-purple-700 dark:text-purple-300 font-medium">e-Office</span> hướng tới mô hình <em>“Phòng họp không giấy”</em>, góp phần vào chuyển đổi số 4.0.
-        </p>
-        <a href="#support" class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 px-8 rounded-xl text-lg font-semibold shadow-md transition duration-300 ease-in-out">
-            Khám phá ngay
-        </a>
-    </div>
-
-    <!-- Hình ảnh minh họa -->
-    <div class="md:w-1/2 flex justify-center">
-        <img src="image/vpdt1.png" alt="e-Office illustration" class="rounded-2xl shadow-xl w-full max-w-xl object-cover">
-    </div>
-</div>
-
-        <!-- Thach Thuc & Giai Phap -->
-        <div class="">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                <!-- Challenge 1 -->
-                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
-                    <div class="flex items-start mb-4">
-                        <div class="w-8 h-8 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
-                            <span class="text-white font-bold text-sm">1</span>
-                        </div>
+    <body class="antialiased bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-slate-900 dark:to-gray-800">
+        <!-- Hero Section -->
+        <section class="swiper-container min-h-screen">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide bg-cover bg-center" style="background-image: url('image/banner1.png')">
+                    <div class="flex items-center justify-center h-screen text-white text-center px-4">
                         <div>
-                            <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Thay đổi thói quen từ giấy sang số</h4>
-                            <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
-                                <p class="text-green-700 dark:text-green-300 text-sm">
-                                    <span class="font-medium">✓ Giải pháp:</span> Đào tạo trực tiếp, giao diện thân thiện, mô phỏng quy trình cũ.
-                                </p>
+                            <h1 class="text-5xl md:text-6xl font-bold font-poppins mb-4">
+                                <span id="typing-text" class="typing">e-Office: Chuyển đổi số</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl mb-6">Tối ưu hóa quy trình văn phòng, hướng tới tương lai không giấy.</p>
+                            <a href="#support" class="btn-primary text-white py-3 px-8 rounded-lg text-lg font-semibold">Dùng thử miễn phí</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+                    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                    <div class="flex items-center justify-center h-screen text-white text-center px-4 relative z-10">
+                        <div class="max-w-4xl mx-auto">
+                            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold font-poppins mb-4">
+                                <span id="typing-text-2" class="typing">Văn phòng thông minh</span>
+                            </h1>
+                            <p class="text-lg sm:text-xl md:text-2xl mb-6">Quản lý văn bản, lịch biểu dễ dàng trên mọi thiết bị.</p>
+                            <a href="#support" class="btn-primary text-white py-3 px-8 rounded-lg text-lg font-semibold inline-block">Liên hệ ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </section>
+
+
+        <!-- Introduction -->
+        <section id="introduction" class="py-20 max-w-6xl mx-auto px-4" data-aos="fade-up">
+            <h2 class="text-4xl md:text-3xl font-bold bg-gradient-to-r from-blue-700 via-purple-600 to-blue-800 bg-clip-text text-transparent mb-8 text-center font-poppins">GIỚI THIỆU E-OFFICE & CÁC GIẢI PHÁP ĐỘT PHÁ</h2> 
+            <!-- Phan gioi thieu chinh -->
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-20 max-w-7xl mx-auto px-4">
+                <!-- Noi dung -->
+                <div class="md:w-1/2 text-center md:text-left">
+                    <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-4">
+                        <strong class="text-blue-700 dark:text-blue-400">e-Office</strong> là giải pháp văn phòng điện tử tiên tiến, giúp số hóa quy trình xử lý văn bản, quản lý lịch biểu và tối ưu hóa hiệu suất làm việc.
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
+                        Với giao diện thân thiện và hỗ trợ đa nền tảng, <span class="text-purple-700 dark:text-purple-300 font-medium">e-Office</span> hướng tới mô hình <em>“Phòng họp không giấy”</em>, góp phần vào chuyển đổi số 4.0.
+                    </p>
+                    <a href="#support" class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 px-8 rounded-xl text-lg font-semibold shadow-md transition duration-300 ease-in-out">
+                        Khám phá ngay
+                    </a>
+                </div>
+
+                <!-- Hình ảnh minh họa -->
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="image/vpdt1.png" alt="e-Office illustration" class="rounded-2xl shadow-xl w-full max-w-xl object-cover">
+                </div>
+            </div>
+
+            <!-- Thach Thuc & Giai Phap -->
+            <div class="">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                    <!-- Challenge 1 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
+                        <div class="flex items-start mb-4">
+                            <div class="w-8 h-8 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                <span class="text-white font-bold text-sm">1</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Thay đổi thói quen từ giấy sang số</h4>
+                                <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
+                                    <p class="text-green-700 dark:text-green-300 text-sm">
+                                        <span class="font-medium">✓ Giải pháp:</span> Đào tạo trực tiếp, giao diện thân thiện, mô phỏng quy trình cũ.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Challenge 2 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
+                        <div class="flex items-start mb-4">
+                            <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                <span class="text-white font-bold text-sm">2</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Khó tích hợp hệ thống cũ</h4>
+                                <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
+                                    <p class="text-green-700 dark:text-green-300 text-sm">
+                                        <span class="font-medium">✓ Giải pháp:</span> API mở, hỗ trợ chuyển đổi dữ liệu không đứt quãng.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Challenge 3 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
+                        <div class="flex items-start mb-4">
+                            <div class="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                <span class="text-white font-bold text-sm">3</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Lo ngại về bảo mật</h4>
+                                <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
+                                    <p class="text-green-700 dark:text-green-300 text-sm">
+                                        <span class="font-medium">✓ Giải pháp:</span> Mã hóa AES-256, xác thực 2 lớp.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Challenge 4 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
+                        <div class="flex items-start mb-4">
+                            <div class="w-8 h-8 bg-gradient-to-br from-yellow-500 to-teal-500 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                <span class="text-white font-bold text-sm">4</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Chi phí triển khai ban đầu</h4>
+                                <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
+                                    <p class="text-green-700 dark:text-green-300 text-sm">
+                                        <span class="font-medium">✓ Giải pháp:</span> Gói giá linh hoạt, dùng thử miễn phí 15 ngày, hỗ trợ trả góp.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Challenge 2 -->
-                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
-                    <div class="flex items-start mb-4">
-                        <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
-                            <span class="text-white font-bold text-sm">2</span>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Khó tích hợp hệ thống cũ</h4>
-                            <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
-                                <p class="text-green-700 dark:text-green-300 text-sm">
-                                    <span class="font-medium">✓ Giải pháp:</span> API mở, hỗ trợ chuyển đổi dữ liệu không đứt quãng.
-                                </p>
+            </div>
+        </section>
+        <!-- Features -->
+        <section id="features" class="py-10 max-w-6xl mx-auto px-4" data-aos="fade-up">
+            <h2 class="text-4xl md:text-3xl font-bold bg-gradient-to-r from-blue-700 via-purple-600 to-blue-800 bg-clip-text text-transparent mb-2 text-center font-poppins">TẠI SAO CHỌN CHÚNG TÔI</h2>
+            <p class="text-gray-600 mb-12 max-w-3xl mx-auto text-center">
+            GIẢI PHÁP "ALL-IN-ONE" ĐÁP ỨNG MỌI NHU CẦU VĂN PHÒNG ĐIỆN TỬ
+            </p>
+            
+            <!-- Features Carousel Container -->
+            <div class="features-carousel-container relative overflow-hidden">
+                <!-- Features Track - This will slide horizontally -->
+                <div class="features-track flex transition-transform duration-500 ease-in-out">
+                    <!-- Feature 1 -->
+                    <div class="feature-card w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-4">
+                        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600 flex flex-col items-center text-center h-full">
+                            <div class="w-20 h-20 rounded-full flex items-center justify-center mb-4">
+                                <img src="image/law1.svg" alt="">
                             </div>
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Tuân thủ pháp lý</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-base">Đạt chuẩn Nghị định 30/2020/NĐ-CP, bảo mật đa lớp.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="feature-card w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-4">
+                        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600 flex flex-col items-center text-center h-full">
+                            <div class="w-20 h-20 rounded-full flex items-center justify-center mb-4">
+                                <img src="/image/timeandmoney.svg" alt="">
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Tiết kiệm thời gian & chi phí</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-base">Tự động hóa 90% quy trình, giá cả linh hoạt</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 4 -->
+                    <div class="feature-card w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-4">
+                        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600 flex flex-col items-center text-center h-full">
+                            <div class="w-20 h-20 bg-teal-500 rounded-full flex items-center justify-center mb-4">
+                                <a href="#" class="w-20 h-20 bg-center bg-no-repeat bg-contain mb-4" style="background-image: url('image/danen.svg');"></a>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Công nghệ vượt trội, dễ sử dụng </h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-base">Hỗ trợ đa nền tảng, giao diện trực quan.</p>
+                        </div>
+                    </div>                 
+                    <!-- Feature 6 -->
+                    <div class="feature-card w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-4">
+                        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600 flex flex-col items-center text-center h-full">
+                            <div class="w-20 h-20 rounded-full flex items-center justify-center mb-4">
+                            <img src="image/24h.svg" alt="">
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Hỗ trợ 24/7</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-base">Đội ngũ kỹ thuật chuyên nghiệp, luôn sẵn sàng giải đáp và xử lý sự cố.</p>
                         </div>
                     </div>
                 </div>
+            </div>
+            <!-- Navigation Dots -->
+            <div class="flex justify-center mt-8 space-x-2">
+                <button class="features-dot active w-3 h-3 rounded-full bg-blue-600" data-slide="0"></button>
+                <button class="features-dot w-3 h-3 rounded-full bg-gray-300" data-slide="1"></button>
+            </div>
+        </section>
+        <!-- Features Section -->
+        <!-- Overview -->
+        <section id="overview" class="py-10 max-w-6xl mx-auto px-4" data-aos="fade-up">
+            <h2 class="text-4xl md:text-3xl font-bold bg-gradient-to-r from-blue-700 via-purple-600 to-blue-800 bg-clip-text text-transparent mb-5 text-center font-poppins">MÔ HÌNH TỔNG QUAN</h2>
+            <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed text-center mb-5 max-w-3xl mx-auto">
+                e-Office tích hợp quản lý văn bản đến/đi, lịch công tác, và báo cáo thông minh, mang lại hiệu quả vượt trội cho doanh nghiệp.
+            </p>
+            <!-- Tab Navigation Bar -->
+            <div class="tab-nav bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden mb-8">
+                <div class="flex flex-wrap">
+                    <button class="tab-btn flex-1 py-4 px-4 text-center font-medium border-b-2 border-transparent hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative active" data-tab="tab1">
+                        GIAO DIỆN
+                        <span class="tab-indicator absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-300"></span>
+                    </button>
+                    <button class="tab-btn flex-1 py-4 px-4 text-center font-medium border-b-2 border-transparent hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative" data-tab="tab2">
+                        XỬ LÝ VĂN BẢN ĐẾN
+                        <span class="tab-indicator absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-300"></span>
+                    </button>
+                    <button class="tab-btn flex-1 py-4 px-4 text-center font-medium border-b-2 border-transparent hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative" data-tab="tab3">
+                        XỬ LÝ VĂN BẢN ĐI
+                        <span class="tab-indicator absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-300"></span>
+                    </button>
+                    <button class="tab-btn flex-1 py-4 px-4 text-center font-medium border-b-2 border-transparent hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative" data-tab="tab4">
+                        ĐĂNG KÝ LỊCH CÔNG TÁC
+                        <span class="tab-indicator absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-300"></span>
+                    </button>
+                </div>
+            </div>
+            <!-- Tab Content with Smooth Transitions -->
+            <div class="tab-content relative overflow-hidden rounded-lg shadow-lg">
+                <!-- Tab 1 Content -->
+                <div class="tab-panel absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out" id="tab1">
+                    <img src="image/giaodien.png" alt="Giao diện" class="w-90 h-auto">
+                </div>
                 
-                <!-- Challenge 3 -->
-                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
-                    <div class="flex items-start mb-4">
-                        <div class="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
-                            <span class="text-white font-bold text-sm">3</span>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Lo ngại về bảo mật</h4>
-                            <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
-                                <p class="text-green-700 dark:text-green-300 text-sm">
-                                    <span class="font-medium">✓ Giải pháp:</span> Mã hóa AES-256, xác thực 2 lớp.
-                                </p>
+                <!-- Tab 2 Content -->
+                <div class="tab-panel absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out" id="tab2">
+                    <img src="image/vb-den-1440x695 (1).jpg" alt="Xử lý văn bản đến" class="w-90 h-auto">
+                </div>
+                
+                <!-- Tab 3 Content -->
+                <div class="tab-panel absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out" id="tab3">
+                    <img src="image/quy-trinh-xu-ly-van-ban-di-1440x837.jpg" alt="Xử lý văn bản đi" class="w-90 h-auto">
+                </div>
+                
+                <!-- Tab 4 Content -->
+                <div class="tab-panel absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out" id="tab4">
+                    <img src="image/vb-di.jpg" alt="Đăng ký lịch công tác" class="w-90 h-auto">
+                </div>
+            </div>
+        </section>
+        <!-- Functions -->
+        <section id="functions" class="py-15" data-aos="fade-up">
+            <div class="max-w-6xl mx-auto px-4">
+                <!-- Header Section -->
+                <div class="text-center mb-10">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-4xl md:text-3xl font-bold bg-gradient-to-r from-blue-700 via-purple-600 to-blue-800 bg-clip-text text-transparent mb-4 font-poppins">
+                        CÁC CHỨC NĂNG CHÍNH
+                    </h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    Tối ưu quy trình và nâng cao hiệu suất với các tính năng mạnh mẽ.
+                    </p>
+                    <div class="flex justify-center mt-6">
+                        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+                    </div>
+                </div>
+
+                <!-- Functions Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Function Card 1 -->
+                    <div class="group relative bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl border border-gray-100 dark:border-gray-700 transition-all duration-500 hover:-translate-y-3 overflow-hidden">
+                        <!-- Gradient Background -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 dark:from-blue-400/10 dark:to-cyan-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        
+                        <!-- Floating Elements -->
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
+                        
+                        <div class="relative z-10">
+                            <!-- Icon -->
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                                </svg>
+                            </div>
+                            
+                            <!-- Content -->
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                                Quản trị hệ thống
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                Quản lý hiệu quả, an toàn danh mục và văn bản.
+                            </p>
+                            
+                            <!-- Action Link -->
+                            <div class="flex items-center text-blue-600 dark:text-blue-400 font-semibold group-hover:translate-x-2 transition-transform duration-300">
+                                <span class="text-sm">Tìm hiểu thêm</span>
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Challenge 4 -->
-                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
-                    <div class="flex items-start mb-4">
-                        <div class="w-8 h-8 bg-gradient-to-br from-yellow-500 to-teal-500 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
-                            <span class="text-white font-bold text-sm">4</span>
+
+                    <!-- Function Card 2 -->
+                    <div class="group relative bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl border border-gray-100 dark:border-gray-700 transition-all duration-500 hover:-translate-y-3 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 dark:from-emerald-400/10 dark:to-teal-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                                <img src="image/lichbieu.svg" alt="">
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-300">
+                                Lịch biểu công tác
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                Đăng ký, duyệt lịch họp thông minh, đồng bộ và tự động nhắc.
+                            </p>
+                            <div class="flex items-center text-emerald-600 dark:text-emerald-400 font-semibold group-hover:translate-x-2 transition-transform duration-300">
+                                <span class="text-sm">Tìm hiểu thêm</span>
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </div>
                         </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Chi phí triển khai ban đầu</h4>
-                            <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
-                                <p class="text-green-700 dark:text-green-300 text-sm">
-                                    <span class="font-medium">✓ Giải pháp:</span> Gói giá linh hoạt, dùng thử miễn phí 15 ngày, hỗ trợ trả góp.
-                                </p>
+                    </div>
+                    <!-- Function Card 3 -->
+                    <div class="group relative bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl border border-gray-100 dark:border-gray-700 transition-all duration-500 hover:-translate-y-3 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-red-500/5 dark:from-orange-400/10 dark:to-red-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-orange-400/20 to-red-400/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                                <img src="image/xulyvb.svg" alt="">
+                            </div>
+                            
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300">
+                                Xử lý văn bản
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            Xử lý và tra cứu văn bản đến/đi bằng AI và quy trình tự động.
+                            </p>
+                            
+                            <div class="flex items-center text-orange-600 dark:text-orange-400 font-semibold group-hover:translate-x-2 transition-transform duration-300">
+                                <span class="text-sm">Tìm hiểu thêm</span>
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Function Card 4 -->
+                    <div class="group relative bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl border border-gray-100 dark:border-gray-700 transition-all duration-500 hover:-translate-y-3 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 dark:from-purple-400/10 dark:to-pink-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                                <img src="image/bcao.svg" alt="">
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
+                                Báo cáo thông minh
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                Phân tích xử lý văn bản qua dashboard trực quan và insights thông minh.
+                            </p>
+                            
+                            <div class="flex items-center text-purple-600 dark:text-purple-400 font-semibold group-hover:translate-x-2 transition-transform duration-300">
+                                <span class="text-sm">Tìm hiểu thêm</span>
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                                <!-- Function Card 5 -->
+                    <div class="group relative bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl border border-gray-100 dark:border-gray-700 transition-all duration-500 hover:-translate-y-3 overflow-hidden md:col-span-2 lg:col-span-1">
+                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-blue-500/5 dark:from-indigo-400/10 dark:to-blue-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-indigo-400/20 to-blue-400/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z"/>
+                                </svg>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+                                Điều hành - Giao việc
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                Phân công và theo dõi công việc real-time qua thông báo thông minh.
+                            </p>
+                            
+                            <div class="flex items-center text-indigo-600 dark:text-indigo-400 font-semibold group-hover:translate-x-2 transition-transform duration-300">
+                                <span class="text-sm">Tìm hiểu thêm</span>
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Features -->
-    <section id="features" class="py-10 max-w-6xl mx-auto px-4" data-aos="fade-up">
-        <h2 class="text-4xl md:text-3xl font-bold bg-gradient-to-r from-blue-700 via-purple-600 to-blue-800 bg-clip-text text-transparent mb-2 text-center font-poppins">TẠI SAO CHỌN CHÚNG TÔI</h2>
-        <p class="text-gray-600 mb-12 max-w-3xl mx-auto text-center">
-        GIẢI PHÁP "ALL-IN-ONE" ĐÁP ỨNG MỌI NHU CẦU VĂN PHÒNG ĐIỆN TỬ
-        </p>
-        
-        <!-- Features Carousel Container -->
-        <div class="features-carousel-container relative overflow-hidden">
-            <!-- Features Track - This will slide horizontally -->
-            <div class="features-track flex transition-transform duration-500 ease-in-out">
-                <!-- Feature 1 -->
-                <div class="feature-card w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-4">
-                    <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600 flex flex-col items-center text-center h-full">
-                        <div class="w-20 h-20 rounded-full flex items-center justify-center mb-4">
-                            <img src="image/law1.svg" alt="">
+        </section>
+
+        <!-- Technical -->
+        <section id="technical" class="py-20 max-w-6xl mx-auto px-4" data-aos="fade-up">
+            <h2 class="text-4xl md:text-3xl font-bold bg-gradient-to-r from-blue-700 via-purple-600 to-blue-800 bg-clip-text text-transparent mb-2 text-center font-poppins">CÔNG NGHỆ & BẢO MẬT</h2>
+            <!-- Code of AI -->
+            <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600">
+                    <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Nền tảng kỹ thuật</h3>
+                    <ul class="text-gray-700 dark:text-gray-300 text-lg space-y-3">
+                        <li><strong>CSDL:</strong> PostgreSQL, MySQL, Oracle</li>
+                        <li><strong>Nền tảng:</strong> Web, hỗ trợ tiếng Việt (TCVN 6909:2001)</li>
+                        <li><strong>Thiết bị:</strong> iOS 10.0+, Android 8.0+</li>
+                        <li><strong>Trình duyệt:</strong> Chrome, Firefox, Edge (50+)</li>
+                    </ul>
+                </div>
+                <div class="card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600">
+                    <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Bảo mật tối ưu</h3>
+                    <ul class="text-gray-700 dark:text-gray-300 text-lg space-y-3">
+                        <li>Xác thực đạt chuẩn quốc tế</li>
+                        <li>Sao lưu định kỳ, mã hóa dữ liệu</li>
+                        <li>Bảo vệ thông tin nhạy cảm</li>
+                    </ul>
+                </div>
+            </div> -->
+            <!-- Editer -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Nền tảng kỹ thuật Card -->
+                <div class="group relative bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl border border-gray-100 dark:border-gray-700 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                    <!-- Gradient Background Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 dark:from-blue-400/10 dark:to-cyan-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <!-- Floating Elements -->
+                    <div class="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-full blur-xl group-hover:scale-125 transition-transform duration-700"></div>
+                    
+                    <div class="relative z-10">
+                        <!-- Header with Icon -->
+                        <div class="flex items-center mb-6">
+                            <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                                <img src="image/setting1.svg" alt="">
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                                Nền tảng kỹ thuật
+                            </h3>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Tuân thủ pháp lý</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-base">Đạt chuẩn Nghị định 30/2020/NĐ-CP, bảo mật đa lớp.</p>
+                        
+                        <!-- Technical Specs -->
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-700/50 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors duration-300">
+                                <div class="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
+                                <div>
+                                    <span class="font-semibold text-gray-900 dark:text-white">CSDL:</span>
+                                    <span class="text-gray-700 dark:text-gray-300 ml-2">PostgreSQL, MySQL, Oracle</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-700/50 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors duration-300">
+                                <div class="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
+                                <div>
+                                    <span class="font-semibold text-gray-900 dark:text-white">Nền tảng:</span>
+                                    <span class="text-gray-700 dark:text-gray-300 ml-2">Web, hỗ trợ tiếng Việt (TCVN 6909:2001)</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-700/50 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors duration-300">
+                                <div class="w-2 h-2 bg-indigo-500 rounded-full mt-3 flex-shrink-0"></div>
+                                <div>
+                                    <span class="font-semibold text-gray-900 dark:text-white">Thiết bị:</span>
+                                    <span class="text-gray-700 dark:text-gray-300 ml-2">iOS 10.0+, Android 8.0+</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-700/50 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors duration-300">
+                                <div class="w-2 h-2 bg-purple-500 rounded-full mt-3 flex-shrink-0"></div>
+                                <div>
+                                    <span class="font-semibold text-gray-900 dark:text-white">Trình duyệt:</span>
+                                    <span class="text-gray-700 dark:text-gray-300 ml-2">Chrome, Firefox, Edge (50+)</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tech Stack Icons -->
+                        <div class="flex justify-center space-x-4 mt-6 pt-6 border-t border-gray-200 dark:border-gray-600">
+                            <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
+                                <span class="text-blue-600 dark:text-blue-400 font-bold text-xs">DB</span>
+                            </div>
+                            <div class="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center">
+                                <span class="text-green-600 dark:text-green-400 font-bold text-xs">WEB</span>
+                            </div>
+                            <div class="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center">
+                                <span class="text-purple-600 dark:text-purple-400 font-bold text-xs">APP</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- Feature 2
-                <div class="feature-card w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-4">
-                    <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600 flex flex-col items-center text-center h-full">
-                        <div class="w-20 h-20 bg-teal-500 rounded-full flex items-center justify-center mb-4">
-                            <img src="/image/expand-fullscreen-svgrepo-com.svg" alt="">
-                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h16v12zM6 10h2v2H6v-2zm0 4h8v2H6v-2zm10 0h2v2h-2v-2zm-6-4h8v2h-8v-2z"/>
-                            </svg>
+
+                <!-- Bảo mật tối ưu Card -->
+                <div class="group relative bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl border border-gray-100 dark:border-gray-700 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                    <!-- Gradient Background Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 dark:from-emerald-400/10 dark:to-teal-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <!-- Floating Elements -->
+                    <div class="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-full blur-xl group-hover:scale-125 transition-transform duration-700"></div>
+                    
+                    <div class="relative z-10">
+                        <!-- Header with Icon -->
+                        <div class="flex items-center mb-6">
+                            <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                                <img src="image/security.svg" alt="">
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-300">
+                                Bảo mật tối ưu
+                            </h3>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Dễ dàng mở rộng</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-base">Kiến trúc module cho phép mở rộng quy mô linh hoạt.</p>
-                    </div>
-                </div>                 -->
-                <!-- Feature 3 -->
-                <div class="feature-card w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-4">
-                    <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600 flex flex-col items-center text-center h-full">
-                        <div class="w-20 h-20 rounded-full flex items-center justify-center mb-4">
-                            <img src="/image/timeandmoney.svg" alt="">
+                        
+                        <!-- Security Features -->
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-700/50 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors duration-300">
+                                <div class="w-8 h-8 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-emerald-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Xác thực đạt chuẩn quốc tế</h4>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Tuân thủ các tiêu chuẩn bảo mật ISO 27001:2022</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-700/50 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors duration-300">
+                                <div class="w-8 h-8 bg-teal-100 dark:bg-teal-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-teal-600 dark:text-teal-400" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Sao lưu định kỳ, mã hóa dữ liệu</h4>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Mã hóa AES-256, backup tự động hàng ngày</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-700/50 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors duration-300">
+                                <div class="w-8 h-8 bg-cyan-100 dark:bg-cyan-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-cyan-600 dark:text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12,12H19C18.47,16.11 15.72,19.78 12,20.92V12H5V6.3L12,3.19M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1Z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Bảo vệ thông tin</h4>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Phân quyền chi tiết, audit log đầy đủ</p>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Tiết kiệm thời gian & chi phí</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-base">Tự động hóa 90% quy trình, giá cả linh hoạt</p>
-                    </div>
-                </div>
-                
-                <!-- Feature 4 -->
-                <div class="feature-card w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-4">
-                    <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600 flex flex-col items-center text-center h-full">
-                        <div class="w-20 h-20 bg-teal-500 rounded-full flex items-center justify-center mb-4">
-                            <a href="#" class="w-20 h-20 bg-center bg-no-repeat bg-contain mb-4" style="background-image: url('image/danen.svg');"></a>
+                        
+                        <!-- Security Badges -->
+                        <div class="flex justify-center space-x-3 mt-6 pt-6 border-t border-gray-200 dark:border-gray-600">
+                            <div class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 rounded-full">
+                                <span class="text-emerald-700 dark:text-emerald-300 text-xs font-semibold">SSL/TLS</span>
+                            </div>
+                            <div class="px-3 py-1 bg-teal-100 dark:bg-teal-900/30 rounded-full">
+                                <span class="text-teal-700 dark:text-teal-300 text-xs font-semibold">AES-256</span>
+                            </div>
+                            <div class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 rounded-full">
+                                <span class="text-cyan-700 dark:text-cyan-300 text-xs font-semibold">ISO 27001</span>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Công nghệ vượt trội, dễ sử dụng </h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-base">Hỗ trợ đa nền tảng, giao diện trực quan.</p>
-                    </div>
-                </div>
-                
-                <!-- Feature 5
-                <div class="feature-card w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-4">
-                    <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600 flex flex-col items-center text-center h-full">
-                        <div class="w-20 h-20 rounded-full flex items-center justify-center mb-4">
-                            <a href="#" class="w-20 h-20 bg-center bg-no-repeat bg-contain mb-4" style="background-image: url('https://vedunet.vn//Upload/Section/Attr/BaoMat.svg');"></a>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Bảo mật cao</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-base">Bảo mật đa lớp, mã hóa dữ liệu an toàn.</p>
-                    </div>
-                </div> -->
-                
-                <!-- Feature 6 -->
-                <div class="feature-card w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-4">
-                    <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600 flex flex-col items-center text-center h-full">
-                        <div class="w-20 h-20 rounded-full flex items-center justify-center mb-4">
-                        <img src="image/24h.svg" alt="">
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Hỗ trợ 24/7</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-base">Đội ngũ kỹ thuật chuyên nghiệp, luôn sẵn sàng giải đáp và xử lý sự cố.</p>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Navigation Dots -->
-        <div class="flex justify-center mt-8 space-x-2">
-            <button class="features-dot active w-3 h-3 rounded-full bg-blue-600" data-slide="0"></button>
-            <button class="features-dot w-3 h-3 rounded-full bg-gray-300" data-slide="1"></button>
-        </div>
-    </section>
-    <!-- Features Section -->
-    <!-- Overview -->
-    <section id="overview" class="py-10 max-w-6xl mx-auto px-4" data-aos="fade-up">
-        <h2 class="text-4xl md:text-3xl font-bold bg-gradient-to-r from-blue-700 via-purple-600 to-blue-800 bg-clip-text text-transparent mb-5 text-center font-poppins">MÔ HÌNH TỔNG QUAN</h2>
-        <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed text-center mb-5 max-w-3xl mx-auto">
-            e-Office tích hợp quản lý văn bản đến/đi, lịch công tác, và báo cáo thông minh, mang lại hiệu quả vượt trội cho doanh nghiệp.
-        </p>
-        <!-- Tab Navigation Bar -->
-        <div class="tab-nav bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden mb-8">
-            <div class="flex flex-wrap">
-                <button class="tab-btn flex-1 py-4 px-4 text-center font-medium border-b-2 border-transparent hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative active" data-tab="tab1">
-                    GIAO DIỆN
-                    <span class="tab-indicator absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-300"></span>
-                </button>
-                <button class="tab-btn flex-1 py-4 px-4 text-center font-medium border-b-2 border-transparent hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative" data-tab="tab2">
-                    XỬ LÝ VĂN BẢN ĐẾN
-                    <span class="tab-indicator absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-300"></span>
-                </button>
-                <button class="tab-btn flex-1 py-4 px-4 text-center font-medium border-b-2 border-transparent hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative" data-tab="tab3">
-                    XỬ LÝ VĂN BẢN ĐI
-                    <span class="tab-indicator absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-300"></span>
-                </button>
-                <button class="tab-btn flex-1 py-4 px-4 text-center font-medium border-b-2 border-transparent hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative" data-tab="tab4">
-                    ĐĂNG KÝ LỊCH CÔNG TÁC
-                    <span class="tab-indicator absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-300"></span>
-                </button>
+        </section>
+        <!-- Support -->
+        <!-- <section id="support" class="py-20 max-w-6xl mx-auto px-4" data-aos="fade-up">
+            <h2 class="text-4xl md:text-3xl font-bold bg-gradient-to-r from-blue-700 via-purple-600 to-blue-800 bg-clip-text text-transparent mb-2 text-center font-poppins">HỖ TRỢ CHUYÊN NGHIỆP</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600">
+                    <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Bảo hành & Bảo trì</h3>
+                    <ul class="text-gray-700 dark:text-gray-300 text-lg space-y-3">
+                        <li><strong>Thời gian:</strong> 12 tháng từ ngày nghiệm thu</li>
+                        <li><strong>Hình thức:</strong> Bảo hành tận nơi</li>
+                        <li><strong>Nội dung:</strong> Bảo trì 2 lần/năm, xử lý sự cố</li>
+                    </ul>
+                </div>
+                <div class="card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600">
+                    <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Kênh hỗ trợ</h3>
+                    <ul class="text-gray-700 dark:text-gray-300 text-lg space-y-3">
+                        <li>Hotline: <a href="tel:02923731072" class="text-orange-500 hover:underline">0292 3731072 - 530</a></li>
+                        <li>Website: <a href="http://support.cuscsoft.com:8080/redmine/" target="_blank" class="text-orange-500 hover:underline">support.cuscsoft.com</a></li>
+                        <li>Email: <a href="mailto:support.cusc@ctu.edu.vn" class="text-orange-500 hover:underline">support.cusc@ctu.edu.vn</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <!-- Tab Content with Smooth Transitions -->
-        <div class="tab-content relative overflow-hidden rounded-lg shadow-lg">
-            <!-- Tab 1 Content -->
-            <div class="tab-panel absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out" id="tab1">
-                <img src="image/giaodien.png" alt="Giao diện" class="w-90 h-auto">
+            <div class="text-center mt-8">
+                <a href="mailto:support.cusc@ctu.edu.vn" class="btn-primary text-white py-3 px-8 rounded-lg text-lg font-semibold">Gửi yêu cầu hỗ trợ</a>
+            </div>
+        </section>
+
+        Footer -->
+        <!-- <footer class="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-12 text-center">
+            <div class="max-w-6xl mx-auto px-4">
+                <img src="image/LogoSeries.png" alt="CUSC Logo" class="mx-auto h-16 mb-6">
+                <p class="text-lg font-poppins">Trung tâm Công nghệ Phần mềm Đại học Cần Thơ</p>
+                <p class="mt-2">01 Lý Tự Trọng, P. An Phú, Q. Ninh Kiều, TP. Cần Thơ</p>
+                <p class="mt-2">Hotline: <a href="tel:02923731072" class="hover:text-orange-400">0292 3731072 - 500</a></p>
+                <p class="mt-2">Email: <a href="mailto:cusc@ctu.edu.vn" class="hover:text-orange-400">cusc@ctu.edu.vn</a> | Website: <a href="http://www.cusc.ctu.edu.vn" class="hover:text-orange-400">www.cusc.ctu.edu.vn</a></p>
+            </div>
+        </footer> -->
+        <!-- Footer -->
+        <footer class="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
             </div>
             
-            <!-- Tab 2 Content -->
-            <div class="tab-panel absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out" id="tab2">
-                <img src="image/vb-den-1440x695 (1).jpg" alt="Xử lý văn bản đến" class="w-90 h-auto">
-            </div>
-            
-            <!-- Tab 3 Content -->
-            <div class="tab-panel absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out" id="tab3">
-                <img src="image/quy-trinh-xu-ly-van-ban-di-1440x837.jpg" alt="Xử lý văn bản đi" class="w-90 h-auto">
-            </div>
-            
-            <!-- Tab 4 Content -->
-            <div class="tab-panel absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out" id="tab4">
-                <img src="image/vb-di.jpg" alt="Đăng ký lịch công tác" class="w-90 h-auto">
-            </div>
-        </div>
-    </section>
-    <!-- Functions -->
-    <section id="functions" class="py-15" data-aos="fade-up">
-    <div class="max-w-6xl mx-auto px-4">
-        <!-- Header Section -->
-        <div class="text-center mb-10">
-            <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl mb-6">
-                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            <!-- Top Wave -->
+            <div class="absolute top-0 left-0 w-full overflow-hidden">
+                <svg class="relative block w-full h-12" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="rgba(255,255,255,0.05)"></path>
                 </svg>
             </div>
-            <h2 class="text-4xl md:text-3xl font-bold bg-gradient-to-r from-blue-700 via-purple-600 to-blue-800 bg-clip-text text-transparent mb-4 font-poppins">
-                CÁC CHỨC NĂNG CHÍNH
-            </h2>
-            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-               Tối ưu quy trình và nâng cao hiệu suất với các tính năng mạnh mẽ.
-            </p>
-            <div class="flex justify-center mt-6">
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-            </div>
-        </div>
 
-        <!-- Functions Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Function Card 1 -->
-            <div class="group relative bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl border border-gray-100 dark:border-gray-700 transition-all duration-500 hover:-translate-y-3 overflow-hidden">
-                <!-- Gradient Background -->
-                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 dark:from-blue-400/10 dark:to-cyan-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
-                <!-- Floating Elements -->
-                <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
-                
-                <div class="relative z-10">
-                    <!-- Icon -->
-                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
-                        </svg>
-                    </div>
-                    
-                    <!-- Content -->
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-                        Quản trị hệ thống
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                        Quản lý hiệu quả, an toàn danh mục và văn bản.
-                    </p>
-                    
-                    <!-- Action Link -->
-                    <div class="flex items-center text-blue-600 dark:text-blue-400 font-semibold group-hover:translate-x-2 transition-transform duration-300">
-                        <span class="text-sm">Tìm hiểu thêm</span>
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Function Card 2 -->
-            <div class="group relative bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl border border-gray-100 dark:border-gray-700 transition-all duration-500 hover:-translate-y-3 overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 dark:from-emerald-400/10 dark:to-teal-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
-                
-                <div class="relative z-10">
-                    <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
-                        <img src="image/lichbieu.svg" alt="">
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-300">
-                        Lịch biểu công tác
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                        Đăng ký, duyệt lịch họp thông minh, đồng bộ và tự động nhắc.
-                    </p>
-                    <div class="flex items-center text-emerald-600 dark:text-emerald-400 font-semibold group-hover:translate-x-2 transition-transform duration-300">
-                        <span class="text-sm">Tìm hiểu thêm</span>
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            <!-- Function Card 3 -->
-            <div class="group relative bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl border border-gray-100 dark:border-gray-700 transition-all duration-500 hover:-translate-y-3 overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-red-500/5 dark:from-orange-400/10 dark:to-red-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-orange-400/20 to-red-400/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
-                
-                <div class="relative z-10">
-                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
-                        <img src="image/xulyvb.svg" alt="">
-                    </div>
-                    
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300">
-                        Xử lý văn bản
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                       Xử lý và tra cứu văn bản đến/đi bằng AI và quy trình tự động.
-                    </p>
-                    
-                    <div class="flex items-center text-orange-600 dark:text-orange-400 font-semibold group-hover:translate-x-2 transition-transform duration-300">
-                        <span class="text-sm">Tìm hiểu thêm</span>
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Function Card 4 -->
-            <div class="group relative bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl border border-gray-100 dark:border-gray-700 transition-all duration-500 hover:-translate-y-3 overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 dark:from-purple-400/10 dark:to-pink-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
-                
-                <div class="relative z-10">
-                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
-                        <img src="image/bcao.svg" alt="">
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
-                        Báo cáo thông minh
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                        Phân tích xử lý văn bản qua dashboard trực quan và insights thông minh.
-                    </p>
-                    
-                    <div class="flex items-center text-purple-600 dark:text-purple-400 font-semibold group-hover:translate-x-2 transition-transform duration-300">
-                        <span class="text-sm">Tìm hiểu thêm</span>
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-                        <!-- Function Card 5 -->
-            <div class="group relative bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl border border-gray-100 dark:border-gray-700 transition-all duration-500 hover:-translate-y-3 overflow-hidden md:col-span-2 lg:col-span-1">
-                <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-blue-500/5 dark:from-indigo-400/10 dark:to-blue-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-indigo-400/20 to-blue-400/20 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
-                
-                <div class="relative z-10">
-                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z"/>
-                        </svg>
-                    </div>
-                    
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
-                        Điều hành - Giao việc
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                        Phân công và theo dõi công việc real-time qua thông báo thông minh.
-                    </p>
-                    
-                    <div class="flex items-center text-indigo-600 dark:text-indigo-400 font-semibold group-hover:translate-x-2 transition-transform duration-300">
-                        <span class="text-sm">Tìm hiểu thêm</span>
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Bottom CTA Section -->
-        <div class="mt-20">
-            <div class="relative bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 rounded-3xl p-8 md:p-12 text-white overflow-hidden">
-                <!-- Background Pattern -->
-                <div class="absolute inset-0 opacity-10">
-                    <div class="absolute top-0 left-0 w-40 h-40 bg-white rounded-full -translate-x-20 -translate-y-20"></div>
-                    <div class="absolute bottom-0 right-0 w-60 h-60 bg-white rounded-full translate-x-20 translate-y-20"></div>
-                </div>
-                
-                <div class="relative z-10 text-center">
-                    <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-2xl mb-6">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/>
-                        </svg>
-                    </div>
-                    
-                    <h3 class="text-3xl md:text-4xl font-bold mb-4">
-                        Sẵn sàng trải nghiệm e-Office?
-                    </h3>
-                    <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-                        Khám phá tất cả tính năng mạnh mẽ và bắt đầu chuyển đổi số ngay hôm nay
-                    </p>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="#support" class="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
-                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.91,10.59L6.5,12L11,16.5Z"/>
-                            </svg>
-                            Dùng thử miễn phí
-                        </a>
-                        <a href="#video" class="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 hover:-translate-y-1">
-                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M8,5.14V19.14L19,12.14L8,5.14Z"/>
-                            </svg>
-                            Xem Demo
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Technical -->
-    <section id="technical" class="py-20 max-w-6xl mx-auto px-4" data-aos="fade-up">
-        <h2 class="text-4xl md:text-3xl font-bold bg-gradient-to-r from-blue-700 via-purple-600 to-blue-800 bg-clip-text text-transparent mb-2 text-center font-poppins">CÔNG NGHỆ & BẢO MẬT</h2>
-        <!-- Code of AI -->
-        <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600">
-                <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Nền tảng kỹ thuật</h3>
-                <ul class="text-gray-700 dark:text-gray-300 text-lg space-y-3">
-                    <li><strong>CSDL:</strong> PostgreSQL, MySQL, Oracle</li>
-                    <li><strong>Nền tảng:</strong> Web, hỗ trợ tiếng Việt (TCVN 6909:2001)</li>
-                    <li><strong>Thiết bị:</strong> iOS 10.0+, Android 8.0+</li>
-                    <li><strong>Trình duyệt:</strong> Chrome, Firefox, Edge (50+)</li>
-                </ul>
-            </div>
-            <div class="card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600">
-                <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Bảo mật tối ưu</h3>
-                <ul class="text-gray-700 dark:text-gray-300 text-lg space-y-3">
-                    <li>Xác thực đạt chuẩn quốc tế</li>
-                    <li>Sao lưu định kỳ, mã hóa dữ liệu</li>
-                    <li>Bảo vệ thông tin nhạy cảm</li>
-                </ul>
-            </div>
-        </div> -->
-        <!-- Editer -->
-         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-            <!-- Nền tảng kỹ thuật Card -->
-            <div class="group relative bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl border border-gray-100 dark:border-gray-700 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
-                <!-- Gradient Background Effect -->
-                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 dark:from-blue-400/10 dark:to-cyan-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
-                <!-- Floating Elements -->
-                <div class="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-full blur-xl group-hover:scale-125 transition-transform duration-700"></div>
-                
-                <div class="relative z-10">
-                    <!-- Header with Icon -->
-                    <div class="flex items-center mb-6">
-                        <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
-                            <img src="image/setting1.svg" alt="">
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-                            Nền tảng kỹ thuật
-                        </h3>
-                    </div>
-                    
-                    <!-- Technical Specs -->
-                    <div class="space-y-4">
-                        <div class="flex items-start space-x-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-700/50 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors duration-300">
-                            <div class="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
-                            <div>
-                                <span class="font-semibold text-gray-900 dark:text-white">CSDL:</span>
-                                <span class="text-gray-700 dark:text-gray-300 ml-2">PostgreSQL, MySQL, Oracle</span>
-                            </div>
-                        </div>
+            <div class="relative z-10 py-5">
+                <!-- Main Footer Content -->
+                <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16">
                         
-                        <div class="flex items-start space-x-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-700/50 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors duration-300">
-                            <div class="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
-                            <div>
-                                <span class="font-semibold text-gray-900 dark:text-white">Nền tảng:</span>
-                                <span class="text-gray-700 dark:text-gray-300 ml-2">Web, hỗ trợ tiếng Việt (TCVN 6909:2001)</span>
+                        <!-- Company Info -->
+                        <div class="lg:col-span-2">
+                            <div class="flex items-center mb-8">
+                                <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-xl flex items-center justify-center mr-4 shadow-lg">
+                                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">
+                                        CUSC
+                                    </h3>
+                                    <p class="text-blue-200 text-sm">Software Technology Center</p>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="flex items-start space-x-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-700/50 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors duration-300">
-                            <div class="w-2 h-2 bg-indigo-500 rounded-full mt-3 flex-shrink-0"></div>
-                            <div>
-                                <span class="font-semibold text-gray-900 dark:text-white">Thiết bị:</span>
-                                <span class="text-gray-700 dark:text-gray-300 ml-2">iOS 10.0+, Android 8.0+</span>
+                            
+                            <h4 class="text-xl font-semibold mb-4 text-blue-100">
+                                Trung tâm Công nghệ Phần mềm Đại học Cần Thơ
+                            </h4>
+                            
+                            <div class="space-y-4 mb-8">
+                                <div class="flex items-start">
+                                    <svg class="w-5 h-5 text-blue-300 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12,2C15.31,2 18,4.66 18,7.95C18,12.41 12,19 12,19S6,12.41 6,7.95C6,4.66 8.69,2 12,2M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6Z"/>
+                                    </svg>
+                                    <p class="text-blue-100">01 Lý Tự Trọng, P. An Phú, Q. Ninh Kiều, TP. Cần Thơ</p>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 text-green-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/>
+                                    </svg>
+                                    <a href="tel:02923731072" class="text-green-300 hover:text-green-200 font-semibold transition-colors">
+                                        0292 3731072 - 500
+                                    </a>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/>
+                                    </svg>
+                                    <a href="mailto:cusc@ctu.edu.vn" class="text-purple-300 hover:text-purple-200 font-semibold transition-colors">
+                                        cusc@ctu.edu.vn
+                                    </a>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M16.36,14C16.44,13.3 16.5,12.66 16.5,12S16.44,10.7 16.36,10H19.74C19.9,10.64 20,11.31 20,12S19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12S9.56,10.66 9.66,10H14.34C14.44,10.66 14.5,11.32 14.5,12S14.44,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12S4.1,10.64 4.26,10H7.64C7.56,10.7 7.5,11.34 7.5,12S7.56,13.3 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/>
+                                    </svg>
+                                    <a href="http://www.cusc.ctu.edu.vn" class="text-blue-300 hover:text-blue-200 font-semibold transition-colors">
+                                        www.cusc.ctu.edu.vn
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="flex items-start space-x-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-700/50 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors duration-300">
-                            <div class="w-2 h-2 bg-purple-500 rounded-full mt-3 flex-shrink-0"></div>
-                            <div>
-                                <span class="font-semibold text-gray-900 dark:text-white">Trình duyệt:</span>
-                                <span class="text-gray-700 dark:text-gray-300 ml-2">Chrome, Firefox, Edge (50+)</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Tech Stack Icons -->
-                    <div class="flex justify-center space-x-4 mt-6 pt-6 border-t border-gray-200 dark:border-gray-600">
-                        <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
-                            <span class="text-blue-600 dark:text-blue-400 font-bold text-xs">DB</span>
-                        </div>
-                        <div class="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center">
-                            <span class="text-green-600 dark:text-green-400 font-bold text-xs">WEB</span>
-                        </div>
-                        <div class="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center">
-                            <span class="text-purple-600 dark:text-purple-400 font-bold text-xs">APP</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bảo mật tối ưu Card -->
-            <div class="group relative bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl border border-gray-100 dark:border-gray-700 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
-                <!-- Gradient Background Effect -->
-                <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 dark:from-emerald-400/10 dark:to-teal-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
-                <!-- Floating Elements -->
-                <div class="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-full blur-xl group-hover:scale-125 transition-transform duration-700"></div>
-                
-                <div class="relative z-10">
-                    <!-- Header with Icon -->
-                    <div class="flex items-center mb-6">
-                        <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
-                            <img src="image/security.svg" alt="">
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-300">
-                            Bảo mật tối ưu
-                        </h3>
-                    </div>
-                    
-                    <!-- Security Features -->
-                    <div class="space-y-4">
-                        <div class="flex items-start space-x-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-700/50 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors duration-300">
-                            <div class="w-8 h-8 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <svg class="w-4 h-4 text-emerald-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
+                            
+                            <!-- Service Badge -->
+                            <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full border border-green-400/30 pulse-glow">
+                                <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z"/>
                                 </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Xác thực đạt chuẩn quốc tế</h4>
-                                <p class="text-sm text-gray-600 dark:text-gray-400">Tuân thủ các tiêu chuẩn bảo mật ISO 27001:2022</p>
+                                <span class="text-green-300 font-medium">Hỗ trợ 24/7 • Bảo hành 12 tháng</span>
                             </div>
                         </div>
-                        
-                        <div class="flex items-start space-x-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-700/50 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors duration-300">
-                            <div class="w-8 h-8 bg-teal-100 dark:bg-teal-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <svg class="w-4 h-4 text-teal-600 dark:text-teal-400" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Sao lưu định kỳ, mã hóa dữ liệu</h4>
-                                <p class="text-sm text-gray-600 dark:text-gray-400">Mã hóa AES-256, backup tự động hàng ngày</p>
-                            </div>
+
+                        <!-- Quick Links -->
+                        <div>
+                            <h4 class="text-lg font-semibold mb-6 text-blue-100">Liên kết nhanh</h4>
+                            <ul class="space-y-3">
+                                <li><a href="#introduction" class="text-blue-200 hover:text-white transition-colors hover:pl-2 duration-300">Giới thiệu</a></li>
+                                <li><a href="#features" class="text-blue-200 hover:text-white transition-colors hover:pl-2 duration-300">Tính năng</a></li>
+                                <li><a href="#functions" class="text-blue-200 hover:text-white transition-colors hover:pl-2 duration-300">Chức năng</a></li>
+                                <li><a href="#technical" class="text-blue-200 hover:text-white transition-colors hover:pl-2 duration-300">Công nghệ</a></li>
+                                <li><a href="#support" class="text-blue-200 hover:text-white transition-colors hover:pl-2 duration-300">Hỗ trợ</a></li>
+                                <li><a href="#contact" class="text-blue-200 hover:text-white transition-colors hover:pl-2 duration-300">Liên hệ</a></li>
+                            </ul>
                         </div>
-                        
-                        <div class="flex items-start space-x-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-700/50 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors duration-300">
-                            <div class="w-8 h-8 bg-cyan-100 dark:bg-cyan-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <svg class="w-4 h-4 text-cyan-600 dark:text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12,12H19C18.47,16.11 15.72,19.78 12,20.92V12H5V6.3L12,3.19M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1Z"/>
-                                </svg>
+
+                        <!-- Contact & Social -->
+                        <div>
+                            <h4 class="text-lg font-semibold mb-6 text-blue-100">Kết nối với chúng tôi</h4>
+                            
+                            <!-- Consultant Info -->
+                            <div class="glass-effect rounded-xl p-4 mb-6 hover-lift">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-10 h-10 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center mr-3">
+                                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-medium text-sm">Chuyên viên tư vấn</p>
+                                        <p class="text-blue-200 text-xs">Hỗ trợ 24/7</p>
+                                    </div>
+                                </div>
+                                <div class="space-y-2 text-sm">
+                                    <p class="text-blue-200">Mr. Lê Vũ Luân</p>
+                                    <a href="tel:0292373107" class="text-green-300 hover:text-green-200 font-medium transition-colors">0366 183 317</a>
+                                </div>
                             </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Bảo vệ thông tin</h4>
-                                <p class="text-sm text-gray-600 dark:text-gray-400">Phân quyền chi tiết, audit log đầy đủ</p>
+                            
+                            <!-- Social Links -->
+                            <div class="space-y-4">
+                                <p class="text-blue-200 text-sm font-medium">Theo dõi chúng tôi:</p>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="w-10 h-10 bg-blue-500/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-blue-500 transition-all duration-300 hover:scale-110">
+                                        <svg class="w-5 h-5 text-blue-300 hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-blue-600/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-blue-600 transition-all duration-300 hover:scale-110">
+                                        <svg class="w-5 h-5 text-blue-300 hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-red-500/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-red-500 transition-all duration-300 hover:scale-110">
+                                        <svg class="w-5 h-5 text-red-300 hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-green-500/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-green-500 transition-all duration-300 hover:scale-110">
+                                        <svg class="w-5 h-5 text-green-300 hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Security Badges -->
-                    <div class="flex justify-center space-x-3 mt-6 pt-6 border-t border-gray-200 dark:border-gray-600">
-                        <div class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 rounded-full">
-                            <span class="text-emerald-700 dark:text-emerald-300 text-xs font-semibold">SSL/TLS</span>
-                        </div>
-                        <div class="px-3 py-1 bg-teal-100 dark:bg-teal-900/30 rounded-full">
-                            <span class="text-teal-700 dark:text-teal-300 text-xs font-semibold">AES-256</span>
-                        </div>
-                        <div class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 rounded-full">
-                            <span class="text-cyan-700 dark:text-cyan-300 text-xs font-semibold">ISO 27001</span>
-                        </div>
+
+                    <!-- Bottom Bar -->
+                    <div class="w-full py-4">
+                        <p class="text-blue-200 text-sm mb-0 text-center">
+                        © 2024 CUSC - Trung tâm Công nghệ Phần mềm Đại học Cần Thơ. All rights reserved.
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Support -->
-    <section id="support" class="py-20 max-w-6xl mx-auto px-4" data-aos="fade-up">
-        <h2 class="text-4xl md:text-3xl font-bold bg-gradient-to-r from-blue-700 via-purple-600 to-blue-800 bg-clip-text text-transparent mb-2 text-center font-poppins">HỖ TRỢ CHUYÊN NGHIỆP</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600">
-                <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Bảo hành & Bảo trì</h3>
-                <ul class="text-gray-700 dark:text-gray-300 text-lg space-y-3">
-                    <li><strong>Thời gian:</strong> 12 tháng từ ngày nghiệm thu</li>
-                    <li><strong>Hình thức:</strong> Bảo hành tận nơi</li>
-                    <li><strong>Nội dung:</strong> Bảo trì 2 lần/năm, xử lý sự cố</li>
-                </ul>
+            
+            <!-- Bottom Wave -->
+            <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+                <svg class="relative block w-full h-8" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" fill="rgba(255,255,255,0.05)"></path>
+                </svg>
             </div>
-            <div class="card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600">
-                <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Kênh hỗ trợ</h3>
-                <ul class="text-gray-700 dark:text-gray-300 text-lg space-y-3">
-                    <li>Hotline: <a href="tel:02923731072" class="text-orange-500 hover:underline">0292 3731072 - 530</a></li>
-                    <li>Website: <a href="http://support.cuscsoft.com:8080/redmine/" target="_blank" class="text-orange-500 hover:underline">support.cuscsoft.com</a></li>
-                    <li>Email: <a href="mailto:support.cusc@ctu.edu.vn" class="text-orange-500 hover:underline">support.cusc@ctu.edu.vn</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="text-center mt-8">
-            <a href="mailto:support.cusc@ctu.edu.vn" class="btn-primary text-white py-3 px-8 rounded-lg text-lg font-semibold">Gửi yêu cầu hỗ trợ</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-12 text-center">
-        <div class="max-w-6xl mx-auto px-4">
-            <img src="image/LogoSeries.png" alt="CUSC Logo" class="mx-auto h-16 mb-6">
-            <p class="text-lg font-poppins">Trung tâm Công nghệ Phần mềm Đại học Cần Thơ</p>
-            <p class="mt-2">01 Lý Tự Trọng, P. An Phú, Q. Ninh Kiều, TP. Cần Thơ</p>
-            <p class="mt-2">Hotline: <a href="tel:02923731072" class="hover:text-orange-400">0292 3731072 - 500</a></p>
-            <p class="mt-2">Email: <a href="mailto:cusc@ctu.edu.vn" class="hover:text-orange-400">cusc@ctu.edu.vn</a> | Website: <a href="http://www.cusc.ctu.edu.vn" class="hover:text-orange-400">www.cusc.ctu.edu.vn</a></p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
-    <script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-        </script>
-</body>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="script.js"></script>
+    </body>
 </html>
