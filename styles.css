@@ -1456,6 +1456,30 @@ header {
 
 /* Thêm vào cuối file styles.css hiện tại */
 
+/* Dời hamburger menu về góc phải */
+#mobile-menu-toggle {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    z-index: 70 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 8px !important;
+    padding: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+
+/* Đảm bảo hamburger luôn ở góc phải */
+@media (max-width: 768px) {
+    #mobile-menu-toggle {
+        position: fixed !important;
+        top: 20px !important;
+        right: 20px !important;
+    }
+}
+
 /* ===== HAMBURGER MENU STYLES ===== */
 
 /* Hamburger Button Animation */
@@ -1743,3 +1767,158 @@ body.menu-open {
         transform: translate3d(0, 0, 0);
     }
 }
+/* Chỉ áp dụng cho mobile (màn hình nhỏ hơn 640px) */
+@media (max-width: 640px) {
+    /* Tăng kích thước icon container trên mobile */
+    #functions .w-16.h-16 {
+        width: 5rem !important;
+        height: 5rem !important;
+    }
+    
+    /* Tăng kích thước icon bên trong trên mobile */
+    #functions .w-16.h-16 svg,
+    #functions .w-16.h-16 img {
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+    }
+}
+/* Sửa lỗi lệch Features trên mobile - Force center */
+@media (max-width: 639px) {
+    /* Reset toàn bộ container */
+    #features {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    #features .max-w-6xl {
+        max-width: 100% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    /* Container carousel */
+    #features .features-carousel-container {
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow: visible !important;
+    }
+    
+    /* Track hiển thị dạng cột */
+    #features .features-track {
+        flex-direction: column !important;
+        transform: none !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    
+    /* Feature cards */
+    #features .feature-card {
+        width: 100% !important;
+        max-width: 300px !important;
+        padding: 0 !important;
+        margin: 0 auto 1.5rem auto !important;
+        flex-shrink: 1 !important;
+    }
+    
+    /* Card content */
+    #features .feature-card > div {
+        margin: 0 auto !important;
+        width: 100% !important;
+    }
+    
+    /* Ẩn dots */
+    #features .features-dot {
+        display: none !important;
+    }
+    
+    /* Ẩn container dots */
+    #features .flex.justify-center.mt-8 {
+        display: none !important;
+    }
+}
+
+
+/* Hamburger Menu Animation Mượt */
+#mobile-menu-toggle {
+    position: relative;
+    z-index: 60;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#mobile-menu-toggle .hamburger-line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: currentColor;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: center;
+    border-radius: 1px;
+}
+
+#mobile-menu-toggle .hamburger-line:nth-child(1) {
+    margin-bottom: 5px;
+}
+
+#mobile-menu-toggle .hamburger-line:nth-child(2) {
+    margin-bottom: 5px;
+}
+
+/* Animation khi menu mở */
+#mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+#mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+#mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Hover effect */
+#mobile-menu-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+#mobile-menu-toggle:hover .hamburger-line {
+    background-color: #f97316;
+}
+
+/*Active state styling */
+#mobile-menu-toggle.active {
+    background-color: rgba(249, 115, 22, 0.1);
+    border-radius: 8px;
+}
+
+#mobile-menu-toggle.active .hamburger-line {
+    background-color: #f97316;
+}
+
+
+/* Navbar cố định đơn giản */
+@media (max-width: 768px) {
+    header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 50 !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(10px) !important;
+    }
+    
+    body {
+        padding-top: 80px !important;
+    }
+    
+    .dark header {
+        background: rgba(31, 41, 55, 0.95) !important;
+    }
+}
+

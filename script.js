@@ -59,7 +59,7 @@ function type2() {
     }
 }
 if (typingText2) type2();
-
+// Toggle menu on hamburger button click
 // Dark Mode Toggle
 const toggleButton = document.getElementById('theme-toggle');
 toggleButton.addEventListener('click', () => {
@@ -535,8 +535,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle') || document.getElementById('mobile-menu-toggle-fixed');
     const mobileMenu = document.getElementById('mobile-menu');
-    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');    
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
     const body = document.body;
     
@@ -554,9 +553,10 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileNavLinks.forEach((link, index) => {
             link.style.animationDelay = `${0.1 + (index * 0.05)}s`;
         });
-        
+                
         // Focus management for accessibility
-        mobileMenuClose.focus();
+        mobileMenuToggle.focus();
+
         
         // Prevent scroll on background
         const scrollY = window.scrollY;
@@ -594,12 +594,6 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             openMobileMenu();
         }
-    });
-    
-    // Close menu on close button click
-    mobileMenuClose.addEventListener('click', function(e) {
-        e.preventDefault();
-        closeMobileMenu();
     });
     
     // Close menu on overlay click
@@ -783,3 +777,5 @@ mobileNavLinks.forEach(link => {
         console.log('Mobile hamburger menu initialized successfully');
     }
 });
+
+
