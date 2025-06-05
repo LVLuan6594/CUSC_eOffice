@@ -47,14 +47,14 @@ toggleButton.addEventListener('click', () => {
 if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark');
 
 // Header scroll effect
-window.addEventListener('scroll', function() {
-  const header = document.querySelector('header');
-  if (window.scrollY > 10) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
-});
+// window.addEventListener('scroll', function() {
+//   const header = document.querySelector('header');
+//   if (window.scrollY > 10) {
+//     header.classList.add('scrolled');
+//   } else {
+//     header.classList.remove('scrolled');
+//   }
+// });
 
 // Add this to your existing script.js file
 
