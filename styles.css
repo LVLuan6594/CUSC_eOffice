@@ -43,11 +43,10 @@ body {
     animation: gradientShift 15s ease infinite;
     min-height: 100vh;
 }
-
-.bold-text {
-  font-weight: bold;
+body {
+    margin: 0;
+    padding: 0;
 }
-
 
 
 /* Dark mode */
@@ -187,11 +186,11 @@ body {
 }
 
 /* Better focus states for accessibility */
-.nav-link:focus,
+/* .nav-link:focus,
 #theme-toggle:focus {
     outline: 2px solid #f97316;
     outline-offset: 2px;
-}
+} */
 
 
 
@@ -207,11 +206,6 @@ body.dark {
     color: #E5E7EB;
 }
 
-.glass {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
 
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -498,6 +492,43 @@ header.scrolled {
     visibility: visible;
     position: relative;
 }
+
+/* Force footer to break out completely */
+footer {
+  margin: 0;
+  padding-bottom: 0; /* hoặc giảm nếu cần */
+}
+
+footer {
+    width: 100vw !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+
+/* Prevent horizontal scroll only for footer */
+html {
+    overflow-x: hidden;
+}
+
+/* Ensure footer background extends fully */
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100px;
+    right: -100px;
+    bottom: 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #312e81 100%);
+    z-index: -1;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
