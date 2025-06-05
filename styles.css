@@ -511,6 +511,62 @@ footer {
     box-sizing: border-box !important;
 }
 
+/* Back to Top Button */
+#backToTop {
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+#backToTop:hover {
+    transform: translateY(-2px) scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #backToTop {
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.75rem;
+    }
+    
+    #backToTop svg {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+}
+
+/* Animation cho nút */
+@keyframes bounceUp {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+#backToTop:hover {
+    animation: bounceUp 0.6s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #backToTop {
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.75rem;
+    }
+    
+    #backToTop svg {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+}
+
 
 /* Prevent horizontal scroll only for footer */
 html {
@@ -537,3 +593,4 @@ footer::before {
         font-size: 0.875rem;
     }
 }
+

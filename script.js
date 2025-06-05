@@ -58,15 +58,26 @@ if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark'
 
 // Add this to your existing script.js file
 
-// Active navigation on scroll
+// Active navigation on scroll - No highlight at footer
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
     
     let current = '';
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    const scrollTop = window.scrollY;
+    
+    // If near bottom of page (footer area), don't highlight anything
+    if (scrollTop + windowHeight >= documentHeight - 100) {
+        // Clear all active states
+        navLinks.forEach(link => link.classList.remove('active'));
+        return;
+    }
+    
+    // Normal section detection
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
         if (scrollY >= (sectionTop - 200)) {
             current = section.getAttribute('id');
         }
@@ -74,11 +85,14 @@ window.addEventListener('scroll', () => {
 
     navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
+        const href = link.getAttribute('href').substring(1);
+        
+        if (href === current) {
             link.classList.add('active');
         }
     });
 });
+
 
 
 // Features Carousel
@@ -221,7 +235,34 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+ //Hieu ung back to top   
+// Back to Top Button - Complete Solution
+// Simple Back to Top
+window.onload = function() {
+    const btn = document.getElementById('backToTop');
     
+    // Show/hide on scroll
+    window.onscroll = function() {
+        if (window.scrollY > 200) {
+            btn.style.display = 'flex';
+        } else {
+            btn.style.display = 'none';
+        }
+    };
+    
+    // Click to scroll
+    btn.onclick = function() {
+        window.scrollTo(0, 0);
+    };
+};
+
+
+
+
     // Update height on window resize
     window.addEventListener('resize', updateContentHeight);
 });
+
+
+//Responsive 
