@@ -30,10 +30,105 @@
         }
 
 :root {
-    --primary: #1E3A8A;
-    --accent: #F97316;
-    --bg-light: #F3F4F6;
-    --bg-dark: #1F2937;
+    --primary: #2563EB; /* Blue 600 - màu chủ đạo chuyên nghiệp */
+    --primary-dark: #1D4ED8; /* Blue 700 - cho hover states */
+    --accent: #0EA5E9; /* Sky 500 - màu nhấn nhẹ nhàng */
+    --bg-light: #F8FAFC; /* Slate 50 - nền sáng */
+    --bg-dark: #0F172A; /* Slate 900 - nền tối */
+    --text-primary: #1E293B; /* Slate 800 - text chính */
+    --text-secondary: #64748B; /* Slate 500 - text phụ */
+}
+
+/* Background đơn giản và chuyên nghiệp hơn */
+body {
+    background: var(--bg-light);
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+/* Dark mode */
+.dark body {
+    background: var(--bg-dark);
+    color: #E2E8F0;
+}
+
+/* Navbar chuyên nghiệp hơn */
+.navbar-glass {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.dark .navbar-glass {
+    background: rgba(15, 23, 42, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Link Styles */
+.nav-link::after {
+    background: var(--primary);
+}
+
+.nav-link:hover::after {
+    background: var(--primary-dark);
+}
+
+/* Button styles */
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Card styles */
+.card {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.dark .card {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Function cards */
+.function-card {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark .function-card {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.function-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background: var(--bg-light);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark footer {
+    background: var(--bg-dark);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Background giống hệt functions section cho toàn bộ website */
