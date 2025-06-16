@@ -779,3 +779,493 @@ mobileNavLinks.forEach(link => {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Tab System
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    // Tab switching function
+    function switchTab(targetTab) {
+        // Remove active class from all tabs and contents
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+        
+        // Add active class to clicked tab and corresponding content
+        const activeButton = document.querySelector(`[data-tab="${targetTab}"]`);
+        const activeContent = document.getElementById(`${targetTab}-tab`);
+        
+        if (activeButton && activeContent) {
+            activeButton.classList.add('active');
+            activeContent.classList.add('active');
+            
+            // Restart animations for the active tab
+            restartTabAnimations(targetTab);
+        }
+    }
+    
+    // Add click event listeners to tab buttons
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetTab = button.getAttribute('data-tab');
+            switchTab(targetTab);
+        });
+    });
+    
+    // Counter Animation Function
+    const animateCounter = (counter) => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+                counter.textContent = target;
+                clearInterval(timer);
+            } else {
+                counter.textContent = Math.floor(current);
+            }
+        }, 16);
+    };
+    
+    // Intersection Observer for counter animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counters = entry.target.querySelectorAll('.counter');
+                counters.forEach(counter => {
+                    if (!counter.classList.contains('animated')) {
+                        counter.classList.add('animated');
+                        animateCounter(counter);
+                    }
+                });
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+    
+    // Observe stats section
+    const statsSection = document.querySelector('[data-aos-delay="600"]');
+    if (statsSection) {
+        observer.observe(statsSection);
+    }
+    
+    // Process Step Interactions
+    function setupProcessSteps(tabName) {
+        const steps = document.querySelectorAll(`#${tabName}-tab .process-step`);
+        
+        steps.forEach((step, index) => {
+            step.addEventListener('click', () => {
+                // Remove active class from all steps in this tab
+                steps.forEach(s => s.classList.remove('active'));
+                
+                // Add active class to clicked step
+                step.classList.add('active');
+                
+                // Add visual feedback
+                const circle = step.querySelector('.w-24.h-24');
+                if (circle) {
+                    circle.style.animation = 'none';
+                    setTimeout(() => {
+                        circle.style.animation = 'stepPulse 2s infinite';
+                    }, 10);
+                }
+            });
+            
+            // Hover effects
+            step.addEventListener('mouseenter', () => {
+                if (!step.classList.contains('active')) {
+                    step.style.transform = 'scale(1.02)';
+                }
+            });
+            
+            step.addEventListener('mouseleave', () => {
+                if (!step.classList.contains('active')) {
+                    step.style.transform = 'scale(1)';
+                }
+            });
+        });
+    }
+    
+    // Auto-play animations for each tab
+    const autoPlayAnimations = {
+        incoming: null,
+        outgoing: null,
+        internal: null
+    };
+    
+    function startAutoPlay(tabName) {
+        const steps = document.querySelectorAll(`#${tabName}-tab .process-step`);
+        if (steps.length === 0) return;
+        
+        let currentStep = 0;
+        
+        const playStep = () => {
+            // Remove active from all steps
+            steps.forEach(s => s.classList.remove('active'));
+            
+            // Add active to current step
+            if (steps[currentStep]) {
+                steps[currentStep].classList.add('active');
+                
+                // Add visual feedback
+                const circle = steps[currentStep].querySelector('.w-24.h-24');
+                if (circle) {
+                    circle.style.animation = 'stepPulse 2s infinite';
+                }
+            }
+            
+            // Move to next step
+            currentStep = (currentStep + 1) % steps.length;
+        };
+        
+        // Start immediately, then repeat every 3 seconds
+        playStep();
+        autoPlayAnimations[tabName] = setInterval(playStep, 3000);
+    }
+    
+    function stopAutoPlay(tabName) {
+        if (autoPlayAnimations[tabName]) {
+            clearInterval(autoPlayAnimations[tabName]);
+            autoPlayAnimations[tabName] = null;
+        }
+    }
+    
+    function restartTabAnimations(tabName) {
+        // Stop current animation
+        stopAutoPlay(tabName);
+        
+        // Setup process steps
+        setupProcessSteps(tabName);
+        
+        // Start auto-play after a short delay
+        setTimeout(() => {
+            startAutoPlay(tabName);
+        }, 1000);
+    }
+    
+    // Initialize the first tab
+    restartTabAnimations('incoming');
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+            const currentActiveTab = document.querySelector('.tab-button.active');
+            const allTabs = Array.from(tabButtons);
+            const currentIndex = allTabs.indexOf(currentActiveTab);
+            
+            let newIndex;
+            if (e.key === 'ArrowLeft') {
+                newIndex = currentIndex > 0 ? currentIndex - 1 : allTabs.length - 1;
+            } else {
+                newIndex = currentIndex < allTabs.length - 1 ? currentIndex + 1 : 0;
+            }
+            
+            const newTab = allTabs[newIndex].getAttribute('data-tab');
+            switchTab(newTab);
+        }
+    });
+    
+    // Pause auto-play on user interaction
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            // Stop all auto-play when tab is hidden
+            Object.keys(autoPlayAnimations).forEach(stopAutoPlay);
+        } else {
+            // Restart auto-play for active tab when tab becomes visible
+            const activeTab = document.querySelector('.tab-content.active');
+            if (activeTab) {
+                const tabName = activeTab.id.replace('-tab', '');
+                setTimeout(() => startAutoPlay(tabName), 1000);
+            }
+        }
+    });
+    
+    // Touch/swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    document.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    document.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+            const currentActiveTab = document.querySelector('.tab-button.active');
+            const allTabs = Array.from(tabButtons);
+            const currentIndex = allTabs.indexOf(currentActiveTab);
+            
+            let newIndex;
+            if (diff > 0) {
+                // Swipe left - next tab
+                newIndex = currentIndex < allTabs.length - 1 ? currentIndex + 1 : 0;
+            } else {
+                // Swipe right - previous tab
+                newIndex = currentIndex > 0 ? currentIndex - 1 : allTabs.length - 1;
+            }
+            
+            const newTab = allTabs[newIndex].getAttribute('data-tab');
+            switchTab(newTab);
+        }
+    }
+    
+    // Progress bar animation for each tab
+    function animateProgressBar(tabName) {
+        const progressBar = document.querySelector(`#${tabName}-tab .${tabName}-progress`);
+        if (progressBar) {
+            progressBar.style.animation = 'none';
+            setTimeout(() => {
+                progressBar.style.animation = 'progressFlow 8s ease-in-out infinite';
+            }, 100);
+        }
+    }
+    
+    // Enhanced tab switching with progress bar animation
+    const originalSwitchTab = switchTab;
+    switchTab = function(targetTab) {
+        originalSwitchTab(targetTab);
+        setTimeout(() => {
+            animateProgressBar(targetTab);
+        }, 300);
+    };
+    
+    // Add accessibility features
+    tabButtons.forEach((button, index) => {
+        button.setAttribute('role', 'tab');
+        button.setAttribute('aria-selected', button.classList.contains('active'));
+        button.setAttribute('tabindex', button.classList.contains('active') ? '0' : '-1');
+        
+        button.addEventListener('focus', () => {
+            button.style.outline = '2px solid #3b82f6';
+            button.style.outlineOffset = '2px';
+        });
+        
+        button.addEventListener('blur', () => {
+            button.style.outline = 'none';
+        });
+    });
+    
+    tabContents.forEach(content => {
+        content.setAttribute('role', 'tabpanel');
+        content.setAttribute('aria-hidden', !content.classList.contains('active'));
+    });
+    
+    // Update ARIA attributes when tabs change
+    const originalTabSwitch = switchTab;
+    switchTab = function(targetTab) {
+        // Update previous function
+        originalTabSwitch(targetTab);
+        
+        // Update ARIA attributes
+        tabButtons.forEach(btn => {
+            const isActive = btn.classList.contains('active');
+            btn.setAttribute('aria-selected', isActive);
+            btn.setAttribute('tabindex', isActive ? '0' : '-1');
+        });
+        
+        tabContents.forEach(content => {
+            content.setAttribute('aria-hidden', !content.classList.contains('active'));
+        });
+        
+        // Animate progress bar
+        setTimeout(() => {
+            animateProgressBar(targetTab);
+        }, 300);
+    };
+    
+    // Performance optimization: Lazy load animations
+    const lazyAnimationObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const element = entry.target;
+                
+                // Add animation classes when element comes into view
+                if (element.classList.contains('process-step')) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+                
+                // Unobserve after animation is triggered
+                lazyAnimationObserver.unobserve(element);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '50px'
+    });
+    
+    // Observe all process steps for lazy loading
+    document.querySelectorAll('.process-step').forEach(step => {
+        step.style.opacity = '0';
+        step.style.transform = 'translateY(20px)';
+        step.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        lazyAnimationObserver.observe(step);
+    });
+    
+    // Add smooth scrolling to process steps on mobile
+    if (window.innerWidth <= 768) {
+        document.querySelectorAll('.process-step').forEach(step => {
+            step.addEventListener('click', () => {
+                step.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            });
+        });
+    }
+    
+    // Initialize tooltips for process steps
+    function initTooltips() {
+        const processSteps = document.querySelectorAll('.process-step');
+        
+        processSteps.forEach(step => {
+            const title = step.querySelector('h4').textContent;
+            const description = step.querySelector('p').textContent;
+            
+            step.setAttribute('title', `${title}: ${description}`);
+            
+            // Create custom tooltip
+            const tooltip = document.createElement('div');
+            tooltip.className = 'absolute z-50 px-3 py-2 text-sm text-white bg-gray-900 rounded-lg shadow-lg opacity-0 pointer-events-none transition-opacity duration-300';
+            tooltip.style.bottom = '100%';
+            tooltip.style.left = '50%';
+            tooltip.style.transform = 'translateX(-50%) translateY(-8px)';
+            tooltip.textContent = `${title}: ${description}`;
+            
+            step.style.position = 'relative';
+            step.appendChild(tooltip);
+            
+            step.addEventListener('mouseenter', () => {
+                tooltip.style.opacity = '1';
+            });
+            
+            step.addEventListener('mouseleave', () => {
+                tooltip.style.opacity = '0';
+            });
+        });
+    }
+    
+    // Initialize tooltips after a short delay
+    setTimeout(initTooltips, 1000);
+    
+    // Add print styles
+    const printStyles = `
+        @media print {
+            .tab-button { display: none !important; }
+            .tab-content { display: block !important; }
+            .tab-content:not(.active) { display: block !important; page-break-before: always; }
+            .process-step { break-inside: avoid; }
+            .bg-gradient-to-br { background: #f3f4f6 !important; }
+            .text-white { color: #000 !important; }
+        }
+    `;
+    
+    const styleSheet = document.createElement('style');
+    styleSheet.textContent = printStyles;
+    document.head.appendChild(styleSheet);
+    
+    // Add export functionality
+    window.exportProcessFlow = function(format = 'pdf') {
+        if (format === 'pdf') {
+            window.print();
+        } else if (format === 'json') {
+            const processData = {
+                incoming: extractProcessData('incoming'),
+                outgoing: extractProcessData('outgoing'),
+                internal: extractProcessData('internal')
+            };
+            
+            const dataStr = JSON.stringify(processData, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'e-office-process-flow.json';
+            link.click();
+            
+            URL.revokeObjectURL(url);
+        }
+    };
+    
+    function extractProcessData(tabName) {
+        const steps = document.querySelectorAll(`#${tabName}-tab .process-step`);
+        return Array.from(steps).map((step, index) => ({
+            step: index + 1,
+            title: step.querySelector('h4')?.textContent || '',
+            description: step.querySelector('p')?.textContent || '',
+            color: getComputedStyle(step.querySelector('.w-24.h-24')).background
+        }));
+    }
+    
+    
+    // Close modal on outside click
+    document.getElementById('help-modal').addEventListener('click', (e) => {
+        if (e.target.id === 'help-modal') {
+            e.target.classList.add('hidden');
+            e.target.classList.remove('flex');
+        }
+    });
+    
+    // Add ESC key to close modal
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            const modal = document.getElementById('help-modal');
+            if (!modal.classList.contains('hidden')) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        }
+        
+        // F1 for help
+        if (e.key === 'F1') {
+            e.preventDefault();
+            document.getElementById('help-modal').classList.remove('hidden');
+            document.getElementById('help-modal').classList.add('flex');
+        }
+    });
+    
+    console.log('🚀 e-Office Process Flow System initialized successfully!');
+    console.log('📋 Available functions:');
+    console.log('  - switchTab(tabName): Switch between tabs');
+    console.log('  - exportProcessFlow(format): Export as PDF or JSON');
+    console.log('  - Press F1 for keyboard shortcuts');
+});
+
+// Global utility functions
+window.eOfficeUtils = {
+    switchTab: (tabName) => {
+        const event = new CustomEvent('switchTab', { detail: { tabName } });
+        document.dispatchEvent(event);
+    },
+    
+    getCurrentTab: () => {
+        const activeTab = document.querySelector('.tab-content.active');
+        return activeTab ? activeTab.id.replace('-tab', '') : null;
+    },
+    
+    getProcessSteps: (tabName) => {
+        const steps = document.querySelectorAll(`#${tabName}-tab .process-step`);
+        return Array.from(steps).map(step => ({
+            title: step.querySelector('h4')?.textContent,
+            description: step.querySelector('p')?.textContent
+        }));
+    },
+    
+    highlightStep: (tabName, stepIndex) => {
+        const steps = document.querySelectorAll(`#${tabName}-tab .process-step`);
+        steps.forEach((step, index) => {
+            step.classList.toggle('active', index === stepIndex);
+        });
+    }
+};

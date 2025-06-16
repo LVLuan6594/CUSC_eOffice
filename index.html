@@ -10,10 +10,9 @@
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
         <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </head>
     <!-- Header Container -->
-
-
     <body class="antialiased bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-slate-900 dark:to-gray-800">
         <header class="fixed top-0 left-0 right-0 z-50">
             <!-- Navbar -->
@@ -188,33 +187,327 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </section>
+
         <!-- Introduction -->
         <section id="introduction" class="py-20 max-w-6xl mx-auto px-4" data-aos="fade-up" style="padding-bottom: 30px;">
             <h2 class="text-4xl md:text-3xl font-bold bg-gradient-to-r from-blue-700 via-purple-600 to-blue-800 bg-clip-text text-transparent mb-2 text-center font-poppins">GIỚI THIỆU E-OFFICE</h2>
             <div class="flex justify-center mb-12">
                 <div class="w-32 h-1 bg-blue-600 rounded-full"></div>
             </div>
-            <!-- Phan gioi thieu chinh -->
-            <div class="flex flex-col md:flex-row items-center gap-12 mb-20 max-w-7xl mx-auto px-4">
-                <!-- Noi dung -->
-                <div class="md:w-1/2 text-center md:text-left">
-                    <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-4">
-                        <strong class="text-blue-700 dark:text-blue-400">e-Office</strong> là giải pháp văn phòng điện tử tiên tiến, giúp số hóa quy trình xử lý văn bản, quản lý lịch biểu và tối ưu hóa hiệu suất làm việc.
-                    </p>
-                    <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
-                        Với giao diện thân thiện và hỗ trợ đa nền tảng, <span class="text-purple-700 dark:text-purple-300 font-medium">e-Office</span> hướng tới mô hình <em>"Phòng họp không giấy"</em>, góp phần vào chuyển đổi số 4.0.
-                    </p>
-                    <a href="#support" class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 px-8 rounded-xl text-lg font-semibold shadow-md transition duration-300 ease-in-out">
-                        Khám phá ngay
-                    </a>
-                </div>
+            
+            <!-- Phần giới thiệu chính được tái cấu trúc -->
+            <div class="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-purple-900/20 rounded-3xl shadow-2xl border border-blue-100 dark:border-gray-700 mb-16">
+                <!-- Background decoration -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-blue-200/30 to-purple-200/30 rounded-full blur-3xl -translate-y-32 translate-x-32"></div>
+                <div class="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-purple-200/30 to-blue-200/30 rounded-full blur-3xl translate-y-24 -translate-x-24"></div>
+                
+                <div class="relative z-10 p-8 md:p-12">
+                    <!-- Nội dung giới thiệu chính -->
+                    <div class="flex flex-col lg:flex-row items-center gap-12 mb-16">
+                        <!-- Nội dung text -->
+                        <div class="lg:w-1/2 text-center lg:text-left">
+                            <div class="mb-8">
+                                <h3 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-6">
+                                    Giải pháp văn phòng điện tử <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">thế hệ mới</span>
+                                </h3>
+                                <p class="text-gray-800 dark:text-gray-100 text-lg leading-relaxed mb-4">
+                                    <strong class="text-blue-700 dark:text-blue-300">e-Office</strong> là giải pháp văn phòng điện tử tiên tiến, giúp số hóa quy trình xử lý văn bản, quản lý lịch biểu và tối ưu hóa hiệu suất làm việc.
+                                </p>
 
-                <!-- Hình ảnh minh họa -->
-                <div class="md:w-1/2 flex justify-center">
-                    <img src="image/vpdt1.png" alt="e-Office illustration" class="rounded-2xl shadow-xl w-full max-w-xl object-cover">
+                                <!-- <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
+                                    Với giao diện thân thiện và hỗ trợ đa nền tảng, <span class="text-purple-700 dark:text-purple-300 font-medium">e-Office</span> hướng tới mô hình <em>"Phòng họp không giấy"</em>, góp phần vào chuyển đổi số 4.0.
+                                </p> -->
+                            </div>
+                            
+                            <!-- Thống kê nhanh -->
+                            <div class="grid grid-cols-3 gap-6 mb-8">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">100%</div>
+                                    <div class="text-sm text-gray-600 dark:text-gray-400">Paperless</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-green-600 dark:text-green-400">24/7</div>
+                                    <div class="text-sm text-gray-600 dark:text-gray-400">Hỗ trợ</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">Multi</div>
+                                    <div class="text-sm text-gray-600 dark:text-gray-400">Platform</div>
+                                </div>
+                            </div>
+                            
+                            <a href="#support" class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 px-8 rounded-xl text-lg font-semibold shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                                Khám phá ngay
+                            </a>
+                        </div>
+                        
+                        <!-- Hình ảnh minh họa -->
+                        <div class="lg:w-1/2 flex justify-center">
+                            <div class="relative">
+                                <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl blur-xl transform rotate-6"></div>
+                                <img src="image/vpdt1.png" alt="e-Office illustration" class="relative rounded-2xl shadow-xl w-full max-w-xl object-cover transform hover:scale-105 transition-transform duration-300">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Đường phân cách với icon -->
+                    <div class="flex items-center justify-center mb-16">
+                        <div class="flex-1 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent"></div>
+                        <div class="mx-6 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg border border-gray-200 dark:border-gray-600">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent"></div>
+                    </div>
+                    
+                    <!-- Phần nền tảng mobile được tích hợp -->
+                    <div class="text-center mb-12">
+                        <h3 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent mb-4 font-poppins">
+                            Trải nghiệm đa nền tảng
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">
+                            e-Office được tối ưu hóa cho mọi thiết bị, mang đến trải nghiệm làm việc liền mạch trên mọi nền tảng
+                        </p>
+                    </div>
+                    
+                    <!-- Platform cards -->
+                    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+                        <!-- Android Card -->
+                        <div class="group relative bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-green-100 dark:border-gray-600" data-aos="fade-up" data-aos-delay="100">
+                            <div class="absolute inset-0 bg-gradient-to-br from-green-400/10 to-emerald-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503c-1.2943-.5065-2.7937-.7939-4.1938-.7939s-2.8995.2874-4.1938.7939L6.7764 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.61 11.2394-.3871 16.2946.0429 21.8679.6516 21.9584 1.2611 22 1.8701 22h20.2598c.609 0 1.2185-.0416 1.8272-.1321.43-5.5733-2.5671-10.6285-7.0126-12.5965"/>
+                                    </svg>
+                                </div>
+                                <h4 class="text-2xl font-bold text-gray-800 dark:text-white mb-4 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-300">
+                                    Android App
+                                </h4>
+                                <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                                    Ứng dụng native được tối ưu hóa cho hệ sinh thái Android, hỗ trợ đầy đủ tính năng với hiệu suất cao và giao diện Material Design.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium">Material UI</span>
+                                    <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium">Offline Mode</span>
+                                    <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium">Push Notifications</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- iOS Card -->
+                        <div class="group relative bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-blue-100 dark:border-gray-600" data-aos="fade-up" data-aos-delay="200">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-indigo-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                                    </svg>
+                                </div>
+                                <h4 class="text-2xl font-bold text-gray-800 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                                    iOS App
+                                </h4>
+                                <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                                    Ứng dụng được thiết kế theo chuẩn Human Interface Guidelines của Apple, tích hợp sâu với hệ sinh thái iOS và iPadOS.
+                                </p>
+                                                        <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">SwiftUI</span>
+                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">iCloud Sync</span>
+                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">Face ID</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Cross-platform benefits -->
+                    <div class="text-center mb-12">
+                        <div class="inline-flex items-center justify-center space-x-8 bg-white/80 dark:bg-gray-700/80 backdrop-blur-sm rounded-2xl px-8 py-6 shadow-lg border border-gray-200 dark:border-gray-500">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                                <span class="text-gray-800 dark:text-gray-100 font-medium">Đồng bộ real-time</span>
+                            </div>
+                            <div class="w-px h-6 bg-gray-300 dark:bg-gray-500"></div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+                                <span class="text-gray-800 dark:text-gray-100 font-medium">Bảo mật end-to-end</span>
+                            </div>
+                            <div class="w-px h-6 bg-gray-300 dark:bg-gray-500"></div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-3 h-3 bg-purple-500 rounded-full animate-pulse"></div>
+                                <span class="text-gray-800 dark:text-gray-100 font-medium">Trải nghiệm nhất quán</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile mockup showcase - Được tích hợp liền mạch -->
+            <div class="relative">
+                <div class="relative">
+                <!-- Background gradient tạo sự liên kết -->
+                <div class="absolute inset-0 bg-gradient-to-b from-blue-50/70 via-purple-50/50 to-transparent dark:from-blue-900/20 dark:via-purple-900/15 dark:to-transparent rounded-3xl"></div>
+                               
+                <div class="relative z-10 py-16">
+                    <div class="text-center mb-16">
+                        <h3 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 dark:from-blue-400 dark:via-purple-400 dark:to-indigo-400 bg-clip-text text-transparent mb-6 font-poppins">
+                            Giao diện trực quan trên mọi thiết bị
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-200 text-lg max-w-2xl mx-auto mb-8 font-medium">
+                            Thiết kế responsive và tối ưu hóa cho từng nền tảng, mang đến trải nghiệm người dùng tuyệt vời
+                        </p>
+                                               
+                        <!-- Feature highlights -->
+                        <div class="flex flex-wrap justify-center gap-4 mb-12">
+                            <div class="flex items-center space-x-2 bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm border border-gray-200 dark:border-gray-500">
+                                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                                <span class="text-sm font-medium text-gray-800 dark:text-gray-100">Responsive Design</span>
+                            </div>
+                            <div class="flex items-center space-x-2 bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm border border-gray-200 dark:border-gray-500">
+                                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                                <span class="text-sm font-medium text-gray-800 dark:text-gray-100">Native Performance</span>
+                            </div>
+                            <div class="flex items-center space-x-2 bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm border border-gray-200 dark:border-gray-500">
+                                <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                                <span class="text-sm font-medium text-gray-800 dark:text-gray-100">Cross-Platform</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative flex justify-center items-end space-x-8 max-w-5xl mx-auto mb-16">
+                        <!-- iPhone mockup -->
+                        <div class="relative group" data-aos="fade-up" data-aos-delay="100">
+                            <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-[3rem] blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 scale-105"></div>
+                            <div class="relative bg-black rounded-[3rem] p-2 shadow-2xl group-hover:shadow-3xl transition-shadow duration-500">
+                                <div class="bg-white dark:bg-gray-900 rounded-[2.5rem] overflow-hidden w-64 h-[520px]">
+                                    <!-- iPhone notch -->
+                                    <div class="relative bg-black h-8 flex justify-center items-center">
+                                        <div class="w-32 h-6 bg-black rounded-b-2xl"></div>
+                                    </div>
+                                    <!-- iPhone screen content -->
+                                    <div class="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 h-full p-4 relative overflow-hidden">
+                                        <div class="text-center mb-4">
+                                            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl mx-auto mb-2 flex items-center justify-center shadow-lg">
+                                                <span class="text-white font-bold text-lg">eO</span>
+                                            </div>
+                                            <h4 class="font-bold text-gray-800 dark:text-white text-sm">e-Office iOS</h4>
+                                            <p class="text-gray-500 dark:text-gray-400 text-xs">Human Interface Design</p>
+                                        </div>
+                                        <div class="space-y-3">
+                                            <div class="bg-white dark:bg-gray-700 rounded-xl p-3 shadow-sm hover:shadow-md transition-shadow duration-200">
+                                                <div class="flex items-center space-x-3">
+                                                    <div class="w-8 h-8 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
+                                                        <div class="w-3 h-3 bg-blue-500 rounded"></div>
+                                                    </div>
+                                                    <div class="flex-1">
+                                                        <div class="h-2 bg-gray-200 dark:bg-gray-600 rounded w-3/4 mb-1"></div>
+                                                        <div class="h-2 bg-gray-100 dark:bg-gray-700 rounded w-1/2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bg-white dark:bg-gray-700 rounded-xl p-3 shadow-sm hover:shadow-md transition-shadow duration-200">
+                                                <div class="flex items-center space-x-3">
+                                                    <div class="w-8 h-8 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center">
+                                                        <div class="w-3 h-3 bg-green-500 rounded"></div>
+                                                    </div>
+                                                    <div class="flex-1">
+                                                        <div class="h-2 bg-gray-200 dark:bg-gray-600 rounded w-2/3 mb-1"></div>
+                                                        <div class="h-2 bg-gray-100 dark:bg-gray-700 rounded w-3/4"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bg-white dark:bg-gray-700 rounded-xl p-3 shadow-sm hover:shadow-md transition-shadow duration-200">
+                                                <div class="flex items-center space-x-3">
+                                                    <div class="w-8 h-8 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center">
+                                                        <div class="w-3 h-3 bg-purple-500 rounded"></div>
+                                                    </div>
+                                                    <div class="flex-1">
+                                                        <div class="h-2 bg-gray-200 dark:bg-gray-600 rounded w-4/5 mb-1"></div>
+                                                        <div class="h-2 bg-gray-100 dark:bg-gray-700 rounded w-1/3"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg">
+                                iOS App
+                            </div>
+                        </div>
+                        
+                        <!-- Android mockup -->
+                        <div class="relative group" data-aos="fade-up" data-aos-delay="200">
+                            <div class="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600 rounded-[2.5rem] blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 scale-105"></div>
+                            <div class="relative bg-gray-800 rounded-[2.5rem] p-2 shadow-2xl group-hover:shadow-3xl transition-shadow duration-500">
+                                <div class="bg-white dark:bg-gray-900 rounded-[2rem] overflow-hidden w-72 h-[580px]">
+                                    <!-- Android status bar -->
+                                    <div class="bg-gray-900 h-6 flex justify-between items-center px-4">
+                                        <div class="flex space-x-1">
+                                            <div class="w-1 h-1 bg-white rounded-full"></div>
+                                            <div class="w-1 h-1 bg-white rounded-full"></div>
+                                            <div class="w-1 h-1 bg-white rounded-full"></div>
+                                        </div>
+                                        <div class="flex space-x-1">
+                                            <div class="w-4 h-2 border border-white rounded-sm"></div>
+                                            <div class="w-1 h-1 bg-white rounded-full"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Android screen content -->
+                                    <div class="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-800 dark:to-gray-900 h-full p-4 relative overflow-hidden">
+                                        <div class="text-center mb-6">
+                                            <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl mx-auto mb-3 flex items-center justify-center shadow-lg">
+                                                <span class="text-white font-bold text-xl">eO</span>
+                                            </div>
+                                            <h4 class="font-bold text-gray-800 dark:text-white">e-Office Android</h4>
+                                            <p class="text-gray-600 dark:text-gray-400 text-xs mt-1">Material Design 3.0</p>
+                                        </div>
+                                        <div class="space-y-4">
+                                            <div class="bg-white dark:bg-gray-700 rounded-2xl p-4 shadow-sm border-l-4 border-green-500 hover:shadow-md transition-shadow duration-200">
+                                                <div class="flex items-center space-x-3">
+                                                    <div class="w-10 h-10 bg-green-100 dark:bg-green-900 rounded-xl flex items-center justify-center">
+                                                        <div class="w-4 h-4 bg-green-500 rounded"></div>
+                                                    </div>
+                                                    <div class="flex-1">
+                                                        <div class="h-3 bg-gray-200 dark:bg-gray-600 rounded w-4/5 mb-2"></div>
+                                                        <div class="h-2 bg-gray-100 dark:bg-gray-700 rounded w-2/3"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bg-white dark:bg-gray-700 rounded-2xl p-4 shadow-sm border-l-4 border-blue-500 hover:shadow-md transition-shadow duration-200">
+                                                <div class="flex items-center space-x-3">
+                                                    <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center">
+                                                        <div class="w-4 h-4 bg-blue-500 rounded"></div>
+                                                    </div>
+                                                    <div class="flex-1">
+                                                        <div class="h-3 bg-gray-200 dark:bg-gray-600 rounded w-3/4 mb-2"></div>
+                                                        <div class="h-2 bg-gray-100 dark:bg-gray-700 rounded w-4/5"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                                            <div class="bg-white dark:bg-gray-700 rounded-2xl p-4 shadow-sm border-l-4 border-purple-500 hover:shadow-md transition-shadow duration-200">
+                                                <div class="flex items-center space-x-3">
+                                                    <div class="w-10 h-10 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center">
+                                                        <div class="w-4 h-4 bg-purple-500 rounded"></div>
+                                                    </div>
+                                                    <div class="flex-1">
+                                                        <div class="h-3 bg-gray-200 dark:bg-gray-600 rounded w-5/6 mb-2"></div>
+                                                        <div class="h-2 bg-gray-100 dark:bg-gray-700 rounded w-1/2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg">
+                                Android App
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
         <!-- Solution -->
         <section id="solution" class="py-20 bg-gray-50 dark:bg-gray-800" data-aos="fade-up">
             <div class="max-w-6xl mx-auto px-4">
@@ -296,6 +589,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Features -->
         <section id="features" class="max-w-6xl mx-auto px-4" data-aos="fade-up" style="padding-bottom: 80px;">
             <h2 class="text-4xl md:text-3xl font-bold bg-gradient-to-r from-blue-700 via-purple-600 to-blue-800 bg-clip-text text-transparent mb-2 text-center font-poppins">TẠI SAO CHỌN CHÚNG TÔI</h2>
@@ -310,7 +604,7 @@
             <!-- <div class="features-carousel-container relative overflow-hidden">
                  Features Track - This will slide horizontally 
                 <div class="features-track flex transition-transform duration-500 ease-in-out">
-                    <!-- Feature 1
+                    Feature 1
                     <div class="feature-card w-full sm:w-1/2 lg:w-1/4 flex-shrink-0 px-4">
                         <div class="group bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600 flex flex-col items-center text-center h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                             <div class="w-20 h-20 rounded-full flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
@@ -414,57 +708,890 @@
             </div>
         </section>
 
+        <!-- Document Processing Tabs Section -->
+        <section class="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute inset-0">
+                <div class="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+                <div class="absolute top-40 right-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+                <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+            </div>
 
-        <!-- Overview -->
-        <section id="overview" class="py-20 bg-gray-50 dark:bg-gray-800" data-aos="fade-up">
-            <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-4xl md:text-3xl font-bold bg-gradient-to-r from-blue-700 via-purple-600 to-blue-800 bg-clip-text text-transparent mb-2 text-center font-poppins">TỔNG QUAN</h2>
-                <div class="flex justify-center mb-12">
-                    <div class="w-32 h-1 bg-blue-600 rounded-full"></div>
-                </div>
-                <!-- Tab Navigation Bar -->
-                <div class="tab-nav bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden mb-8">
-                    <div class="flex flex-wrap">
-                        <button class="tab-btn flex-1 py-4 px-4 text-center font-medium border-b-2 border-transparent hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative active" data-tab="tab1">
-                            GIAO DIỆN
-                            <span class="tab-indicator absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-300"></span>
-                        </button>
-                        <button class="tab-btn flex-1 py-4 px-4 text-center font-medium border-b-2 border-transparent hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative" data-tab="tab2">
-                            XỬ LÝ VĂN BẢN ĐẾN
-                            <span class="tab-indicator absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-300"></span>
-                        </button>
-                        <button class="tab-btn flex-1 py-4 px-4 text-center font-medium border-b-2 border-transparent hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative" data-tab="tab3">
-                            XỬ LÝ VĂN BẢN ĐI
-                            <span class="tab-indicator absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-300"></span>
-                        </button>
-                        <button class="tab-btn flex-1 py-4 px-4 text-center font-medium border-b-2 border-transparent hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative" data-tab="tab4">
-                            ĐĂNG KÝ LỊCH CÔNG TÁC
-                            <span class="tab-indicator absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-300"></span>
-                        </button>
+            <div class="container mx-auto px-4 relative z-10">
+                <!-- Header -->
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-4xl md:text-3xl font-bold bg-gradient-to-r from-blue-700 via-purple-600 to-blue-800 bg-clip-text text-transparent mb-2 text-center font-poppins">QUY TRÌNH XỬ LÝ</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                        Hệ thống quy trình chuẩn hóa, minh bạch và hiệu quả cho việc xử lý văn bản đến và văn bản đi
+                    </p>
+                    <div class="flex justify-center mb-12">
+                        <div class="w-32 h-1 bg-blue-600 rounded-full"></div>
                     </div>
                 </div>
-                <!-- Tab Content with Smooth Transitions -->
-                <div class="tab-content relative overflow-hidden rounded-lg shadow-lg">
-                    <!-- Tab 1 Content -->
-                    <div class="tab-panel absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out" id="tab1">
-                        <img src="image/giaodien.png" alt="Giao diện" class="w-90 h-auto">
+
+                <!-- Tab Navigation -->
+                <div class="flex justify-center mb-12" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-2 shadow-lg border border-gray-200 dark:border-gray-600">
+                        <div class="flex space-x-2">
+                            <button class="tab-button active px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center space-x-2" data-tab="incoming">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"/>
+                                </svg>
+                                <span>Văn bản đến</span>
+                            </button>
+                            <button class="tab-button px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center space-x-2" data-tab="outgoing">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                                <span>Văn bản đi</span>
+                            </button>
+                            <button class="tab-button px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center space-x-2" data-tab="calendar">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                                <span>Đăng ký lịch</span>
+                            </button>
+                        </div>
                     </div>
-                    
-                    <!-- Tab 2 Content -->
-                    <div class="tab-panel absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out" id="tab2">
-                        <img src="image/vbden.png" alt="Xử lý văn bản đến" class="w-90 h-auto">
+                </div>
+
+                <!-- Tab Contents -->
+                <div class="tab-contents">
+                    <!-- Incoming Documents Tab -->
+                    <div id="incoming-tab" class="tab-content active">
+                        <!-- Process Overview -->
+                        <div class="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-600 mb-12" data-aos="fade-up">
+                            <div class="text-center mb-8">
+                                <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">Quy trình xử lý Văn bản đến</h3>
+                                <p class="text-gray-600 dark:text-gray-300 text-lg">4 giai đoạn chính với vai trò rõ ràng của từng bộ phận</p>
+                            </div>
+
+                            <!-- Process Flow Diagram -->
+                            <div class="relative mb-12">
+                                <!-- Flow Lines -->
+                                <div class="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-300 via-purple-300 via-indigo-300 to-green-300 rounded-full transform -translate-y-1/2 z-0">
+                                    <div class="h-full bg-gradient-to-r from-blue-500 via-purple-500 via-indigo-500 to-green-500 rounded-full animate-pulse opacity-60"></div>
+                                </div>
+
+                                <!-- Process Steps -->
+                                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+                                    
+                                    <!-- Step 1: Tiếp nhận và phân loại -->
+                                    <div class="flex flex-col items-center group process-step" data-aos="zoom-in" data-aos-delay="100">
+                                        <div class="relative mb-6">
+                                            <div class="w-32 h-32 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-all duration-500 relative overflow-hidden">
+                                                <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                                <div class="relative z-10">
+                                                    <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="absolute -top-3 -right-3 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                                    <span class="text-blue-600 font-bold text-lg">1</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-blue-200 dark:border-gray-600 w-full">
+                                            <h4 class="font-bold text-blue-700 dark:text-blue-400 text-center text-xl mb-4">Tiếp nhận & Phân loại</h4>
+                                            
+                                            <!-- Role Badge -->
+                                            <div class="bg-blue-100 dark:bg-blue-900/50 rounded-lg p-3 mb-4">
+                                                <div class="flex items-center justify-center space-x-2">
+                                                    <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                                    </svg>
+                                                    <span class="font-semibold text-blue-700 dark:text-blue-300">Bộ phận Văn thư</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- Tasks -->
+                                            <div class="space-y-2">
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                                                    <span class="text-sm text-gray-600 dark:text-gray-300">Tiếp nhận văn bản</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                                                    <span class="text-sm text-gray-600 dark:text-gray-300">Phân loại theo tính chất</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                                                    <span class="text-sm text-gray-600 dark:text-gray-300">Chuyển phòng chức năng</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 2: Xem xét và kiểm tra -->
+                                    <div class="flex flex-col items-center group process-step" data-aos="zoom-in" data-aos-delay="200">
+                                        <div class="relative mb-6">
+                                            <div class="w-32 h-32 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-all duration-500 relative overflow-hidden">
+                                                <div class="absolute inset-0 bg-gradient-to-r from-purple-400 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                                <div class="relative z-10">
+                                                    <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="absolute -top-3 -right-3 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                                    <span class="text-purple-600 font-bold text-lg">2</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-purple-200 dark:border-gray-600 w-full">
+                                            <h4 class="font-bold text-purple-700 dark:text-purple-400 text-center text-xl mb-4">Xem xét & Kiểm tra</h4>
+                                            
+                                            <!-- Role Badge -->
+                                            <div class="bg-purple-100 dark:bg-purple-900/50 rounded-lg p-3 mb-4">
+                                                <div class="flex items-center justify-center space-x-2">
+                                                    <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                                    </svg>
+                                                    <span class="font-semibold text-purple-700 dark:text-purple-300">P. Kế hoạch - Tổng hợp</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- Tasks -->
+                                            <div class="space-y-2">
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                                                    <span class="text-sm text-gray-600 dark:text-gray-300">Xem xét nội dung</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                                                    <span class="text-sm text-gray-600 dark:text-gray-300">Đánh giá mức độ quan trọng</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                                                    <span class="text-sm text-gray-600 dark:text-gray-300">Xác định hướng xử lý</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                <!-- Step 3: Bút phê lãnh đạo -->
+                                    <div class="flex flex-col items-center group process-step" data-aos="zoom-in" data-aos-delay="300">
+                                        <div class="relative mb-6">
+                                            <div class="w-32 h-32 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-all duration-500 relative overflow-hidden">
+                                                <div class="absolute inset-0 bg-gradient-to-r from-indigo-400 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                                <div class="relative z-10">
+                                                    <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="absolute -top-3 -right-3 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                                    <span class="text-indigo-600 font-bold text-lg">3</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-indigo-200 dark:border-gray-600 w-full">
+                                            <h4 class="font-bold text-indigo-700 dark:text-indigo-400 text-center text-xl mb-4">Bút phê Lãnh đạo</h4>
+                                            
+                                            <!-- Role Badge -->
+                                            <div class="bg-indigo-100 dark:bg-indigo-900/50 rounded-lg p-3 mb-4">
+                                                <div class="flex items-center justify-center space-x-2">
+                                                    <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                                                    </svg>
+                                                    <span class="font-semibold text-indigo-700 dark:text-indigo-300">Lãnh đạo đơn vị</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- Tasks -->
+                                            <div class="space-y-2">
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-2 h-2 bg-indigo-500 rounded-full"></div>
+                                                    <span class="text-sm text-gray-600 dark:text-gray-300">Đưa ra ý kiến chỉ đạo</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-2 h-2 bg-indigo-500 rounded-full"></div>
+                                                    <span class="text-sm text-gray-600 dark:text-gray-300">Phân công nhiệm vụ</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-2 h-2 bg-indigo-500 rounded-full"></div>
+                                                    <span class="text-sm text-gray-600 dark:text-gray-300">Xác định thời hạn</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 4: Tham mưu và hoàn thành -->
+                                    <div class="flex flex-col items-center group process-step" data-aos="zoom-in" data-aos-delay="400">
+                                        <div class="relative mb-6">
+                                            <div class="w-32 h-32 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-all duration-500 relative overflow-hidden">
+                                                <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-green-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                                <div class="relative z-10">
+                                                    <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="absolute -top-3 -right-3 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                                    <span class="text-green-600 font-bold text-lg">4</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-green-200 dark:border-gray-600 w-full">
+                                            <h4 class="font-bold text-green-700 dark:text-green-400 text-center text-xl mb-4">Tham mưu & Hoàn thành</h4>
+                                            
+                                            <!-- Role Badge -->
+                                            <div class="bg-green-100 dark:bg-green-900/50 rounded-lg p-3 mb-4">
+                                                <div class="flex items-center justify-center space-x-2">
+                                                    <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                                    </svg>
+                                                    <span class="font-semibold text-green-700 dark:text-green-300">Phòng chức năng</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- Tasks -->
+                                            <div class="space-y-2">
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                                                    <span class="text-sm text-gray-600 dark:text-gray-300">Thực hiện tham mưu</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                                                    <span class="text-sm text-gray-600 dark:text-gray-300">Báo cáo kết quả</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                                                    <span class="text-sm text-gray-600 dark:text-gray-300">Phổ biến thực hiện</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Simple Flow Legend -->
+                            <div class="mt-12 bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                                <h4 class="font-bold text-gray-800 dark:text-white mb-4 text-center">Quy trình xử lý</h4>
+                                  <div class="flex flex-col md:flex-row items-center justify-center space-y-3 md:space-y-0 md:space-x-8">
+                                      <!-- Main Flow -->
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-6 h-2 bg-gradient-to-r from-blue-500 to-green-500 rounded-full"></div>
+                                         <span class="text-sm text-gray-600 dark:text-gray-300">Luồng chính</span>
+                                     </div>
+                                        
+                                     <!-- Decision Points -->
+                                     <div class="flex items-center space-x-2">
+                                         <div class="flex space-x-1">
+                                            <span class="bg-green-500 text-white px-2 py-1 rounded-full text-xs">✓</span>
+                                            <span class="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs">↻</span>
+                                            <span class="bg-red-500 text-white px-2 py-1 rounded-full text-xs">✗</span>
+                                        </div>
+                                        <span class="text-sm text-gray-600 dark:text-gray-300">Các quyết định</span>
+                                    </div>
+                                    
+                                    <!-- Time -->
+                                    <div class="flex items-center space-x-2">
+                                        <span class="bg-blue-500 text-white px-2 py-1 rounded-full text-xs">⏱️</span>
+                                        <span class="text-sm text-gray-600 dark:text-gray-300">2-5 ngày</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Process Summary -->
+                            <div class="bg-gradient-to-r from-blue-50 to-green-50 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6 mt-8">
+                                <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-4 text-center">Tổng quan quy trình</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold text-blue-600 mb-2">4</div>
+                                        <div class="text-gray-600 dark:text-gray-300">Giai đoạn chính</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold text-purple-600 mb-2">2-5</div>
+                                        <div class="text-gray-600 dark:text-gray-300">Ngày xử lý</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold text-green-600 mb-2">100%</div>
+                                        <div class="text-gray-600 dark:text-gray-300">Minh bạch</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <!-- Tab 3 Content -->
-                    <div class="tab-panel absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out" id="tab3">
-                        <img src="image/vbdi(fn).jpg" alt="..." class="w-full h-full object-fill">
+
+                    <!-- Outgoing Documents Tab -->
+                    <div id="outgoing-tab" class="tab-content">
+                        <!-- Process Overview -->
+                        <div class="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-600 mb-12" data-aos="fade-up">
+                            <div class="text-center mb-8">
+                                <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">Quy trình xử lý Văn bản đi</h3>
+                                <p class="text-gray-600 dark:text-gray-300 text-lg">5 giai đoạn chính với vai trò rõ ràng của từng bộ phận</p>
+                            </div>
+
+                            
+                            <!-- Process Flow Diagram -->
+                            <div class="relative mb-12">
+                                <!-- Main Flow Line -->
+                                <div class="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-200 to-green-200 rounded-full transform -translate-y-1/2 z-0">
+                                    <div class="h-full bg-gradient-to-r from-blue-500 to-green-500 rounded-full animate-pulse opacity-60"></div>
+                                </div>
+                                
+                                <!-- Process Steps -->
+                                <div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative z-10">
+                                    
+                                    <!-- Step 1: Khởi tạo và soạn thảo -->
+                                    <div class="flex flex-col items-center group process-step" data-aos="zoom-in" data-aos-delay="100">
+                                        <div class="relative mb-6">
+                                            <div class="w-28 h-28 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-all duration-500 relative overflow-hidden">
+                                                <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                                <div class="relative z-10">
+                                                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                                    <span class="text-blue-600 font-bold">1</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-blue-200 dark:border-gray-600 w-full">
+                                            <h4 class="font-bold text-blue-700 dark:text-blue-400 text-center text-lg mb-3">Khởi tạo & Soạn thảo</h4>
+                                            
+                                            <!-- Role Badge -->
+                                            <div class="bg-blue-100 dark:bg-blue-900/50 rounded-lg p-2 mb-3">
+                                                <div class="flex items-center justify-center space-x-1">
+                                                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                                    </svg>
+                                                    <span class="font-semibold text-blue-700 dark:text-blue-300 text-sm">Phòng chức năng</span>
+                                                </div>
+                                            </div>
+                                            <!-- Tasks -->
+                                            <div class="space-y-1">
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Xác định nhu cầu</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Soạn thảo nội dung</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Định dạng văn bản</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 2: Thẩm định nội dung -->
+                                    <div class="flex flex-col items-center group process-step" data-aos="zoom-in" data-aos-delay="200">
+                                        <div class="relative mb-6">
+                                            <div class="w-28 h-28 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-all duration-500 relative overflow-hidden">
+                                                <div class="absolute inset-0 bg-gradient-to-r from-indigo-400 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                                <div class="relative z-10">
+                                                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                                    <span class="text-indigo-600 font-bold">2</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-indigo-200 dark:border-gray-600 w-full">
+                                            <h4 class="font-bold text-indigo-700 dark:text-indigo-400 text-center text-lg mb-3">Thẩm định nội dung</h4>
+                                            
+                                            <!-- Role Badge -->
+                                            <div class="bg-indigo-100 dark:bg-indigo-900/50 rounded-lg p-2 mb-3">
+                                                <div class="flex items-center justify-center space-x-1">
+                                                    <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                                    </svg>
+                                                    <span class="font-semibold text-indigo-700 dark:text-indigo-300 text-sm">P. KH-TH</span>
+                                                </div>
+                                            </div>
+                                            <!-- Tasks -->
+                                            <div class="space-y-1">
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-indigo-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Kiểm tra nội dung</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-indigo-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Thẩm định pháp lý</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-indigo-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Góp ý hoàn thiện</span>
+                                                </div>
+                                            </div>
+                                            <!-- Decision indicator -->
+                                            <div class="mt-3 flex justify-center space-x-2">
+                                                <span class="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                                                    ✓ Duyệt
+                                                </span>
+                                                <span class="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                                                    ↻ Sửa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 3: Phê duyệt -->
+                                    <div class="flex flex-col items-center group process-step" data-aos="zoom-in" data-aos-delay="300">
+                                        <div class="relative mb-6">
+                                            <div class="w-28 h-28 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-all duration-500 relative overflow-hidden">
+                                                <div class="absolute inset-0 bg-gradient-to-r from-purple-400 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                                <div class="relative z-10">
+                                                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                                    <span class="text-purple-600 font-bold">3</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-purple-200 dark:border-gray-600 w-full">
+                                            <h4 class="font-bold text-purple-700 dark:text-purple-400 text-center text-lg mb-3">Phê duyệt</h4>
+                                            
+                                            <!-- Role Badge -->
+                                            <div class="bg-purple-100 dark:bg-purple-900/50 rounded-lg p-2 mb-3">
+                                                <div class="flex items-center justify-center space-x-1">
+                                                    <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                                                    </svg>
+                                                    <span class="font-semibold text-purple-700 dark:text-purple-300 text-sm">Lãnh đạo</span>
+                                                </div>
+                                            </div>
+                                            <!-- Tasks -->
+                                            <div class="space-y-1">
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Xem xét toàn bộ</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Phê duyệt/Từ chối</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                                            <div class="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Ký tên, đóng dấu</span>
+                                                </div>
+                                            </div>
+                                            <!-- Decision options -->
+                                            <div class="mt-3 flex justify-center space-x-2">
+                                                <span class="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                                                    ✓ Phê duyệt
+                                                </span>
+                                                <span class="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                                                    ✗ Từ chối
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 4: Đăng ký và lưu trữ -->
+                                    <div class="flex flex-col items-center group process-step" data-aos="zoom-in" data-aos-delay="400">
+                                        <div class="relative mb-6">
+                                            <div class="w-28 h-28 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-all duration-500 relative overflow-hidden">
+                                                <div class="absolute inset-0 bg-gradient-to-r from-teal-400 to-teal-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                                <div class="relative z-10">
+                                                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                                    <span class="text-teal-600 font-bold">4</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-teal-200 dark:border-gray-600 w-full">
+                                            <h4 class="font-bold text-teal-700 dark:text-teal-400 text-center text-lg mb-3">Cho số & Vào sổ</h4>
+                                            
+                                            <!-- Role Badge -->
+                                            <div class="bg-teal-100 dark:bg-teal-900/50 rounded-lg p-2 mb-3">
+                                                <div class="flex items-center justify-center space-x-1">
+                                                    <svg class="w-4 h-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                                    </svg>
+                                                    <span class="font-semibold text-teal-700 dark:text-teal-300 text-sm">P. KH-TH</span>
+                                                </div>
+                                            </div>
+                                            <!-- Tasks -->
+                                            <div class="space-y-1">
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-teal-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Đăng ký số văn bản</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-teal-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Ghi vào sổ theo dõi</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-teal-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Lưu trữ bản gốc</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 5: Phát hành và theo dõi -->
+                                    <div class="flex flex-col items-center group process-step" data-aos="zoom-in" data-aos-delay="500">
+                                        <div class="relative mb-6">
+                                            <div class="w-28 h-28 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-all duration-500 relative overflow-hidden">
+                                                <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-green-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                                <div class="relative z-10">
+                                                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                                    <span class="text-green-600 font-bold">5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-green-200 dark:border-gray-600 w-full">
+                                            <h4 class="font-bold text-green-700 dark:text-green-400 text-center text-lg mb-3">Phát hành & Theo dõi</h4>
+                                            
+                                            <!-- Role Badge -->
+                                            <div class="bg-green-100 dark:bg-green-900/50 rounded-lg p-2 mb-3">
+                                                <div class="flex items-center justify-center space-x-1">
+                                                    <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                                    </svg>
+                                                    <span class="font-semibold text-green-700 dark:text-green-300 text-sm">P. KH-TH</span>
+                                                </div>
+                                            </div>
+                                            <!-- Tasks -->
+                                            <div class="space-y-1">
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Phát hành văn bản</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Gửi đến đơn vị</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Theo dõi thực hiện</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Simple Flow Legend -->
+                                <div class="mt-12 bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                                    <h4 class="font-bold text-gray-800 dark:text-white mb-4 text-center">Quy trình xử lý</h4>
+                                    <div class="flex flex-col md:flex-row items-center justify-center space-y-3 md:space-y-0 md:space-x-8">
+                                        <!-- Main Flow -->
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-6 h-2 bg-gradient-to-r from-blue-500 to-green-500 rounded-full"></div>
+                                            <span class="text-sm text-gray-600 dark:text-gray-300">Luồng chính</span>
+                                        </div>
+                                        
+                                        <!-- Decision Points -->
+                                        <div class="flex items-center space-x-2">
+                                            <div class="flex space-x-1">
+                                                <span class="bg-green-500 text-white px-2 py-1 rounded-full text-xs">✓</span>
+                                                <span class="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs">↻</span>
+                                                <span class="bg-red-500 text-white px-2 py-1 rounded-full text-xs">✗</span>
+                                            </div>
+                                            <span class="text-sm text-gray-600 dark:text-gray-300">Các quyết định</span>
+                                        </div>
+                                        
+                                        <!-- Time -->
+                                        <div class="flex items-center space-x-2">
+                                            <span class="bg-blue-500 text-white px-2 py-1 rounded-full text-xs">⏱️</span>
+                                            <span class="text-sm text-gray-600 dark:text-gray-300">4-6 giờ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Process Summary -->
+                            <div class="bg-gradient-to-r from-blue-50 to-green-50 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6 mt-8">
+                                <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-4 text-center">Tổng quan quy trình</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold text-blue-600 mb-2">5</div>
+                                        <div class="text-gray-600 dark:text-gray-300">Giai đoạn chính</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold text-purple-600 mb-2">4-6</div>
+                                        <div class="text-gray-600 dark:text-gray-300">Giờ xử lý</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold text-green-600 mb-2">100%</div>
+                                        <div class="text-gray-600 dark:text-gray-300">Kiểm soát chất lượng</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Outgoing Documents Tab -->
+                    <div id="calendar-tab" class="tab-content">
+                        <!-- Process Overview -->
+                        <div class="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-600 mb-12" data-aos="fade-up">
+                            <div class="text-center mb-8">
+                                <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">Quy trình Đăng ký lịch</h3>
+                                <p class="text-gray-600 dark:text-gray-300 text-lg">4 giai đoạn chính với vai trò rõ ràng của từng bộ phận</p>
+                            </div>
+                            <!-- Process Flow Diagram -->
+                            <div class="relative mb-12">
+                                <!-- Main Flow Line -->
+                                <div class="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-200 to-green-200 rounded-full transform -translate-y-1/2 z-0">
+                                    <div class="h-full bg-gradient-to-r from-blue-500 to-green-500 rounded-full animate-pulse opacity-60"></div>
+                                </div>
+                                
+                                <!-- Process Steps -->
+                                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative z-10">
+                                    
+                                    <!-- Step 1: Khởi tạo lịch -->
+                                    <div class="flex flex-col items-center group process-step" data-aos="zoom-in" data-aos-delay="100">
+                                        <div class="relative mb-6">
+                                            <div class="w-28 h-28 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-all duration-500 relative overflow-hidden">
+                                                <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                                <div class="relative z-10">
+                                                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                                    <span class="text-blue-600 font-bold">1</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-blue-200 dark:border-gray-600 w-full">
+                                            <h4 class="font-bold text-blue-700 dark:text-blue-400 text-center text-lg mb-3">Khởi tạo lịch</h4>
+                                            
+                                            <!-- Role Badge -->
+                                            <div class="bg-blue-100 dark:bg-blue-900/50 rounded-lg p-2 mb-3">
+                                                <div class="flex items-center justify-center space-x-1">
+                                                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                                    </svg>
+                                                    <span class="font-semibold text-blue-700 dark:text-blue-300 text-sm">Thư ký BGH</span>
+                                                </div>
+                                            </div>
+                                            <!-- Tasks -->
+                                            <div class="space-y-1">
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Cập nhật lịch công tác BGH</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Tạo lịch trống có thể đăng ký</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Khung thời gian có sẵn</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 2: Đăng ký lịch -->
+                                    <div class="flex flex-col items-center group process-step" data-aos="zoom-in" data-aos-delay="200">
+                                        <div class="relative mb-6">
+                                            <div class="w-28 h-28 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-all duration-500 relative overflow-hidden">
+                                                <div class="absolute inset-0 bg-gradient-to-r from-indigo-400 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                                <div class="relative z-10">
+                                                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                                    <span class="text-indigo-600 font-bold">2</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-indigo-200 dark:border-gray-600 w-full">
+                                            <h4 class="font-bold text-indigo-700 dark:text-indigo-400 text-center text-lg mb-3">Đăng ký lịch</h4>
+                                            
+                                            <!-- Role Badge -->
+                                            <div class="bg-indigo-100 dark:bg-indigo-900/50 rounded-lg p-2 mb-3">
+                                                <div class="flex items-center justify-center space-x-1">
+                                                    <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                                    </svg>
+                                                    <span class="font-semibold text-indigo-700 dark:text-indigo-300 text-sm">Lãnh đạo phòng</span>
+                                                </div>
+                                            </div>
+                                            <!-- Tasks -->
+                                            <div class="space-y-1">
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-indigo-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Đăng ký lịch làm việc</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-indigo-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Gửi đến P.KH-TH</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-indigo-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Chờ xem xét</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 3: Phê duyệt lịch -->
+                                    <div class="flex flex-col items-center group process-step" data-aos="zoom-in" data-aos-delay="300">
+                                        <div class="relative mb-6">
+                                            <div class="w-28 h-28 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-all duration-500 relative overflow-hidden">
+                                                <div class="absolute inset-0 bg-gradient-to-r from-purple-400 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                                <div class="relative z-10">
+                                                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                                    <span class="text-purple-600 font-bold">3</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-purple-200 dark:border-gray-600 w-full">
+                                            <h4 class="font-bold text-purple-700 dark:text-purple-400 text-center text-lg mb-3">Phê duyệt lịch</h4>
+                                            
+                                            <!-- Role Badge -->
+                                            <div class="bg-purple-100 dark:bg-purple-900/50 rounded-lg p-2 mb-3">
+                                                <div class="flex items-center justify-center space-x-1">
+                                                    <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                                    </svg>
+                                                    <span class="font-semibold text-purple-700 dark:text-purple-300 text-sm">P. KH-TH</span>
+                                                </div>
+                                            </div>
+                                            <!-- Tasks -->
+                                            <div class="space-y-1">
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Sắp xếp lịch</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Kiểm tra xung đột</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Quyết định duyệt</span>
+                                                </div>
+                                            </div>
+                                            <!-- Decision options -->
+                                            <div class="mt-3 flex justify-center space-x-2">
+                                                <span class="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                                                    ✓ Duyệt
+                                                </span>
+                                                <span class="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                                                    ✗ Không xếp được
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 4: Thông báo kết quả -->
+                                    <div class="flex flex-col items-center group process-step" data-aos="zoom-in" data-aos-delay="400">
+                                        <div class="relative mb-6">
+                                                            <div class="w-28 h-28 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-all duration-500 relative overflow-hidden">
+                                                <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-green-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                                <div class="relative z-10">
+                                                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                                    <span class="text-green-600 font-bold">4</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-green-200 dark:border-gray-600 w-full">
+                                            <h4 class="font-bold text-green-700 dark:text-green-400 text-center text-lg mb-3">Thông báo kết quả</h4>
+                                            
+                                            <!-- Role Badge -->
+                                            <div class="bg-green-100 dark:bg-green-900/50 rounded-lg p-2 mb-3">
+                                                <div class="flex items-center justify-center space-x-1">
+                                                    <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                                    </svg>
+                                                    <span class="font-semibold text-green-700 dark:text-green-300 text-sm">Hệ thống</span>
+                                                </div>
+                                            </div>
+                                            <!-- Tasks -->
+                                            <div class="space-y-1">
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Thông báo cho phòng chức năng</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Cập nhật lịch lãnh đạo</span>
+                                                </div>
+                                                <div class="flex items-center space-x-2">
+                                                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                                                    <span class="text-xs text-gray-600 dark:text-gray-300">Hoàn tất đăng ký</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Simple Flow Legend -->
+                                <div class="mt-8 bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                                    <h4 class="font-bold text-gray-800 dark:text-white mb-4 text-center">Quy trình đăng ký lịch làm việc</h4>
+                                    <div class="flex flex-col md:flex-row items-center justify-center space-y-3 md:space-y-0 md:space-x-8">
+                                        <!-- Main Flow -->
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-6 h-2 bg-gradient-to-r from-blue-500 to-green-500 rounded-full"></div>
+                                            <span class="text-sm text-gray-600 dark:text-gray-300">Luồng chính</span>
+                                        </div>
+                                        
+                                        <!-- Decision Points -->
+                                        <div class="flex items-center space-x-2">
+                                            <div class="flex space-x-1">
+                                                <span class="bg-green-500 text-white px-2 py-1 rounded-full text-xs">✓</span>
+                                                <span class="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs">↻</span>
+                                                <span class="bg-red-500 text-white px-2 py-1 rounded-full text-xs">✗</span>
+                                            </div>
+                                            <span class="text-sm text-gray-600 dark:text-gray-300">Quyết định phê duyệt</span>
+                                        </div>
+                                        
+                                        <!-- Time -->
+                                        <div class="flex items-center space-x-2">
+                                            <span class="bg-blue-500 text-white px-2 py-1 rounded-full text-xs">⏱️</span>
+                                            <span class="text-sm text-gray-600 dark:text-gray-300">1-2 giờ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
 
-                    </div>
-                    
-                    <!-- Tab 4 Content -->
-                    <div class="tab-panel absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out" id="tab4">
-                        <img src="image/vb-di.jpg" alt="Đăng ký lịch công tác" class="w-90 h-auto">
+                            <!-- Process Summary -->
+                            <div class="bg-gradient-to-r from-blue-50 to-green-50 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6 mt-8">
+                                <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-4 text-center">Tổng quan quy trình</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold text-blue-600 mb-2">4</div>
+                                        <div class="text-gray-600 dark:text-gray-300">Giai đoạn chính</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold text-purple-600 mb-2">1-2</div>
+                                        <div class="text-gray-600 dark:text-gray-300">Giờ xử lý</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold text-green-600 mb-2">100%</div>
+                                        <div class="text-gray-600 dark:text-gray-300">Tỷ lệ thành công</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -633,7 +1760,6 @@
                 </div>
             </div>
         </section>
-
         
         <!-- Technical -->
         <section id="technical" class="py-20 max-w-6xl mx-auto px-4" data-aos="fade-up">
