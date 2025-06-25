@@ -1240,9 +1240,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('  - switchTab(tabName): Switch between tabs');
     console.log('  - exportProcessFlow(format): Export as PDF or JSON');
     console.log('  - Press F1 for keyboard shortcuts');
-});
-
-// Global utility functions
+});// Global utility functions
 window.eOfficeUtils = {
     switchTab: (tabName) => {
         const event = new CustomEvent('switchTab', { detail: { tabName } });
@@ -1269,3 +1267,4 @@ window.eOfficeUtils = {
         });
     }
 };
+

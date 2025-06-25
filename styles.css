@@ -1,33 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; }
         
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        .glass-effect {
-            backdrop-filter: blur(16px);
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .hover-lift {
-            transition: all 0.3s ease;
-        }
-        
-        .hover-lift:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-        
-        .pulse-glow {
-            animation: pulse-glow 2s infinite;
-        }
-        
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.3); }
-            50% { box-shadow: 0 0 30px rgba(34, 197, 94, 0.5); }
-        }
+        /* XÓA: .gradient-bg */
+        /* XÓA: .glass-effect */
+        /* XÓA: .hover-lift, .hover-lift:hover */
+        /* XÓA: .pulse-glow, @keyframes pulse-glow */
+        /* XÓA: .function-card, .function-card::before, .function-card:hover, .function-card:nth-child(n), .dark .function-card, .dark .function-card:hover, .function-card:hover::before */
 
 :root {
     --primary: #2563EB; /* Blue 600 - màu chủ đạo chuyên nghiệp */
@@ -140,11 +118,22 @@ body {
 
 /* Navigation Link Styles */
 .nav-link::after {
-    background: var(--primary);
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ea580c, #f97316);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 1px;
 }
 
-.nav-link:hover::after {
-    background: var(--primary-dark);
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+    background: linear-gradient(90deg, #ea580c, #f97316);
 }
 
 /* Button styles */
@@ -172,22 +161,6 @@ body {
 }
 
 .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-}
-
-/* Function cards */
-.function-card {
-    background: white;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.dark .function-card {
-    background: rgba(30, 41, 59, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.function-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
@@ -277,8 +250,10 @@ body {
     border-radius: 1px;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.active::after {
     width: 100%;
+    background: linear-gradient(90deg, #ea580c, #f97316);
 }
 
 /* Dark Mode Toggle Enhanced */
@@ -1070,8 +1045,10 @@ header.sticky {
     border-radius: 1px;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.active::after {
     width: 100%;
+    background: linear-gradient(90deg, #ea580c, #f97316);
 }
 
 /* Active Navigation State */
@@ -2278,13 +2255,13 @@ body.menu-open {
     transition: all 0.3s ease;
 }
 
-/* Focus states for accessibility */
+/* Focus states for accessibility
 #mobile-menu-toggle:focus,
 .mobile-nav-link:focus,
 #mobile-menu-close:focus {
     outline: 2px solid #f97316;
     outline-offset: 2px;
-}
+} */
 
 /* High contrast mode support */
 @media (prefers-contrast: high) {
@@ -2469,7 +2446,7 @@ body.menu-open {
 }
 
 #mobile-menu-toggle.active .hamburger-line:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+    transform: rotate(-45deg) translate(7px, -6px);
 }
 
 /* Hover effect */
@@ -2634,5 +2611,19 @@ body.menu-open {
     .process-step .text-lg {
         font-size: 0.875rem;
     }
+}
+
+.nav-link,
+.nav-link:focus,
+.nav-link:active,
+.nav-link:visited,
+.nav-link:focus-visible,
+.mobile-nav-link,
+.mobile-nav-link:focus,
+.mobile-nav-link:active,
+.mobile-nav-link:visited,
+.mobile-nav-link:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
