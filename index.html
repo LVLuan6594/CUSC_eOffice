@@ -32,7 +32,7 @@
                             </button>             
                             <!-- Logo -->
                             <div class="flex items-center">
-                                <img src="image/logocusc.jpg" alt="CUSC Logo" class="h-16 w-32 mr-4 object-contain" style="object-fit: contain; background: white;">
+                                <img src="image/logochuan.jpg" alt="CUSC Logo" class="h-16 w-32 mr-4 object-contain" style="object-fit: contain; background: white;">
                             </div>
                         </div>
                         
@@ -169,7 +169,7 @@
                                 <span id="typing-text" class="typing">e-Office: Chuyển đổi số</span>
                             </h1>
                             <p class="text-xl md:text-2xl mb-6">Tối ưu hóa quy trình văn phòng, hướng tới tương lai không giấy.</p>
-                            <a href="#contact" class="btn-primary text-white py-3 px-8 rounded-lg text-lg font-semibold">Liên hệ ngay</a>
+                            <a href="#contactModal" class="btn-primary text-white py-3 px-8 rounded-lg text-lg font-semibold">Liên hệ ngay</a>
                         </div>
                     </div>
                 </div>
@@ -181,7 +181,7 @@
                                 <span id="typing-text-2" class="typing">Văn phòng thông minh</span>
                             </h1>
                             <p class="text-lg sm:text-xl md:text-2xl mb-6">Quản lý văn bản, lịch biểu dễ dàng trên mọi thiết bị.</p>
-                            <a href="#contact" class="btn-primary text-white py-3 px-8 rounded-lg text-lg font-semibold inline-block">Liên hệ ngay</a>
+                            <a href="#contactModal" class="btn-primary text-white py-3 px-8 rounded-lg text-lg font-semibold inline-block">Liên hệ ngay</a>
                         </div>
                     </div>
                 </div>
@@ -1934,7 +1934,64 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="script.js"></script>    
+        <!-- Modal Liên hệ tư vấn -->
+        <div id="contactModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 hidden">
+          <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-6 relative animate-fade-in">
+            <!-- Nút đóng -->
+            <button id="closeContactModal" class="absolute top-4 right-4 text-2xl text-gray-400 hover:text-blue-600 focus:outline-none">
+              <i class="fa fa-times"></i>
+            </button>
+            <h2 class="text-2xl font-bold text-blue-700 mb-6">Liên hệ tư vấn</h2>
+            <div class="space-y-6">
+              <!-- Card 1 -->
+              <div class="flex items-center bg-blue-50 rounded-xl p-4 shadow-sm">
+                <img src="image/chandung.jpg" alt="Avatar" class="w-20 h-20 rounded-full border-2 border-white shadow mr-4">
+                <div class="flex-1">
+                  <div class="font-bold text-blue-700 text-lg">Mr. Nguyễn Thanh Nhàn</div>
+                  <div class="text-gray-600 text-sm mb-2">Chuyên viên tư vấn phần mềm 1</div>
+                  <div class="flex items-center text-gray-700 mb-1"><i class="fa fa-phone-alt mr-2"></i> <a href="tel:0939511445" class="contact-link"> 0939 511 445</a></div>
+                  <div class="flex items-center text-gray-700"><i class="fa fa-envelope mr-2"></i> <a href="mailto:nhannguyen@ctu.edu.vn" class="contact-link"> nhannguyen@ctu.edu.vn</a></div>
+                </div>
+                <div class="flex flex-col items-center ml-4">
+                  <img src="image/qrzalo.jpg" alt="QR Zalo" class="w-24 h-24 rounded bg-white border mb-1">
+                  <span class="text-xs text-gray-500">Quét để liên hệ</span>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="flex items-center bg-blue-50 rounded-xl p-4 shadow-sm">
+                <img src="image/chandung.jpg" alt="Avatar" class="w-20 h-20 rounded-full border-2 border-white shadow mr-4">
+                <div class="flex-1">
+                  <div class="font-bold text-blue-700 text-lg">Mr. Lê Vũ Luân</div>
+                  <div class="text-gray-600 text-sm mb-2">Chuyên viên tư vấn phần mềm 2</div>
+                  <div class="flex items-center text-gray-700 mb-1"><i class="fa fa-phone-alt mr-2"></i><a href="tel:0366183317" class="contact-link"> 0366 183 317</a></div>
+                  <div class="flex items-center text-gray-700"><i class="fa fa-envelope mr-2"></i> <a href="mailto:lvluan@ctu.edu.vn" class="contact-link"> lvluan@ctu.edu.vn</a></div>
+                </div>
+                <div class="flex flex-col items-center ml-4">
+                  <img src="image/qrzalo.jpg" alt="QR Zalo" class="w-24 h-24 rounded bg-white border mb-1">
+                  <span class="text-xs text-gray-500">Quét để liên hệ</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </body>
+
+    <script>
+        document.querySelectorAll('a.btn-primary[href="#contactModal"]').forEach(function(btn) {
+          btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('contactModal').classList.remove('hidden');
+          });
+        });
+        document.getElementById('closeContactModal')?.addEventListener('click', function() {
+          document.getElementById('contactModal').classList.add('hidden');
+        });
+        document.getElementById('contactModal')?.addEventListener('click', function(e) {
+          if (e.target === this) {
+            this.classList.add('hidden');
+          }
+        });
+    </script>
 </html>
 
 

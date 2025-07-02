@@ -604,180 +604,177 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Close menu when clicking on navigation links
-// Close menu when clicking on navigation links
-mobileNavLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault(); // Ngăn hành vi mặc định
-        
-        // Lấy target section
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        
-        if (targetSection) {
-            // Đóng menu trước
-            closeMobileMenu();
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Ngăn hành vi mặc định
             
-            // Delay một chút rồi scroll
-            setTimeout(() => {
-                const headerHeight = document.querySelector('header').offsetHeight || 80;
-                const targetPosition = targetSection.offsetTop - headerHeight - 20;
+            // Lấy target section
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                // Đóng menu trước
+                closeMobileMenu();
                 
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }, 400);
-        } else {
-            // Nếu không tìm thấy section, vẫn đóng menu
-            closeMobileMenu();
-        }
-    });
-});
-
-
-
-    // Keyboard navigation support
-    document.addEventListener('keydown', function(e) {
-        if (isMenuOpen) {
-            // Close menu on Escape key
-            if (e.key === 'Escape') {
-                e.preventDefault();
+                // Delay một chút rồi scroll
+                setTimeout(() => {
+                    const headerHeight = document.querySelector('header').offsetHeight || 80;
+                    const targetPosition = targetSection.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }, 400);
+            } else {
+                // Nếu không tìm thấy section, vẫn đóng menu
                 closeMobileMenu();
             }
+        });
+    });
+});
+
+// Keyboard navigation support
+document.addEventListener('keydown', function(e) {
+    if (isMenuOpen) {
+        // Close menu on Escape key
+        if (e.key === 'Escape') {
+            e.preventDefault();
+            closeMobileMenu();
+        }
+        
+        // Tab trapping within mobile menu
+        if (e.key === 'Tab') {
+            const focusableElements = mobileMenu.querySelectorAll(
+                'button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            );
+            const firstElement = focusableElements[0];
+            const lastElement = focusableElements[focusableElements.length - 1];
             
-            // Tab trapping within mobile menu
-            if (e.key === 'Tab') {
-                const focusableElements = mobileMenu.querySelectorAll(
-                    'button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])'
-                );
-                const firstElement = focusableElements[0];
-                const lastElement = focusableElements[focusableElements.length - 1];
-                
-                if (e.shiftKey) {
-                    // Shift + Tab
-                    if (document.activeElement === firstElement) {
-                        e.preventDefault();
-                        lastElement.focus();
-                    }
-                } else {
-                    // Tab
-                    if (document.activeElement === lastElement) {
-                        e.preventDefault();
-                        firstElement.focus();
-                    }
+            if (e.shiftKey) {
+                // Shift + Tab
+                if (document.activeElement === firstElement) {
+                    e.preventDefault();
+                    lastElement.focus();
+                }
+            } else {
+                // Tab
+                if (document.activeElement === lastElement) {
+                    e.preventDefault();
+                    firstElement.focus();
                 }
             }
         }
-    });
-    
-    // Close menu on window resize to desktop size
-    window.addEventListener('resize', function() {
-        if (window.innerWidth >= 768 && isMenuOpen) {
-            closeMobileMenu();
-        }
-    });
-    
-    // Handle orientation change
-    window.addEventListener('orientationchange', function() {
-        if (isMenuOpen) {
-            // Small delay to allow orientation change to complete
-            setTimeout(() => {
-                if (window.innerWidth >= 768) {
-                    closeMobileMenu();
-                }
-            }, 100);
-        }
-    });
-    
-    // Active state management for mobile nav links
-    function updateMobileNavActiveState() {
-        const sections = document.querySelectorAll('section[id]');
-        let current = '';
-        const windowHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
-        const scrollTop = window.scrollY;
-        
-        // Don't highlight anything if near footer
-        if (scrollTop + windowHeight >= documentHeight - 100) {
-            mobileNavLinks.forEach(link => link.classList.remove('active'));
-            return;
-        }
-        
-        // Find current section
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (scrollY >= (sectionTop - 200)) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        // Update active states
-        mobileNavLinks.forEach(link => {
-            link.classList.remove('active');
-            const href = link.getAttribute('href').substring(1);
-            
-            if (href === current) {
-                link.classList.add('active');
-            }
-        });
-    }
-    
-    // Update active states on scroll (throttled)
-    let scrollTimeout;
-    window.addEventListener('scroll', function() {
-        if (!scrollTimeout) {
-            scrollTimeout = setTimeout(function() {
-                updateMobileNavActiveState();
-                scrollTimeout = null;
-            }, 100);
-        }
-    });
-    
-    // Initial active state check
-    updateMobileNavActiveState();
-    
-    // Touch gesture support for mobile menu
-    let touchStartX = 0;
-    let touchStartY = 0;
-    
-    // Swipe to close menu
-    mobileMenu.addEventListener('touchstart', function(e) {
-        touchStartX = e.touches[0].clientX;
-        touchStartY = e.touches[0].clientY;
-    });
-    
-    mobileMenu.addEventListener('touchmove', function(e) {
-        if (!isMenuOpen) return;
-        
-        const touchX = e.touches[0].clientX;
-        const touchY = e.touches[0].clientY;
-        const deltaX = touchX - touchStartX;
-        const deltaY = touchY - touchStartY;
-        
-        // Swipe right to close (only if horizontal swipe is dominant)
-        if (deltaX < -50 && Math.abs(deltaX) > Math.abs(deltaY)) {
-            closeMobileMenu();
-        }
-    });
-    
-    // Prevent menu from closing when scrolling within menu
-    mobileMenu.addEventListener('touchmove', function(e) {
-        e.stopPropagation();
-    });
-    
-    // Performance optimization: Use passive listeners where possible
-    const passiveOptions = { passive: true };
-    
-    mobileMenu.addEventListener('scroll', function() {
-        // Handle menu scroll if needed
-    }, passiveOptions);
-    
-    // Debug logging (remove in production)
-    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-        console.log('Mobile hamburger menu initialized successfully');
     }
 });
 
+// Close menu on window resize to desktop size
+window.addEventListener('resize', function() {
+    if (window.innerWidth >= 768 && isMenuOpen) {
+        closeMobileMenu();
+    }
+});
+
+// Handle orientation change
+window.addEventListener('orientationchange', function() {
+    if (isMenuOpen) {
+        // Small delay to allow orientation change to complete
+        setTimeout(() => {
+            if (window.innerWidth >= 768) {
+                closeMobileMenu();
+            }
+        }, 100);
+    }
+});
+
+// Active state management for mobile nav links
+function updateMobileNavActiveState() {
+    const sections = document.querySelectorAll('section[id]');
+    let current = '';
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    const scrollTop = window.scrollY;
+    
+    // Don't highlight anything if near footer
+    if (scrollTop + windowHeight >= documentHeight - 100) {
+        mobileNavLinks.forEach(link => link.classList.remove('active'));
+        return;
+    }
+    
+    // Find current section
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= (sectionTop - 200)) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    // Update active states
+    mobileNavLinks.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href').substring(1);
+        
+        if (href === current) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Update active states on scroll (throttled)
+let scrollTimeout;
+window.addEventListener('scroll', function() {
+    if (!scrollTimeout) {
+        scrollTimeout = setTimeout(function() {
+            updateMobileNavActiveState();
+            scrollTimeout = null;
+        }, 100);
+    }
+});
+
+// Initial active state check
+updateMobileNavActiveState();
+
+// Touch gesture support for mobile menu
+let touchStartX = 0;
+let touchStartY = 0;
+
+// Swipe to close menu
+mobileMenu.addEventListener('touchstart', function(e) {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+});
+
+mobileMenu.addEventListener('touchmove', function(e) {
+    if (!isMenuOpen) return;
+    
+    const touchX = e.touches[0].clientX;
+    const touchY = e.touches[0].clientY;
+    const deltaX = touchX - touchStartX;
+    const deltaY = touchY - touchStartY;
+    
+    // Swipe right to close (only if horizontal swipe is dominant)
+    if (deltaX < -50 && Math.abs(deltaX) > Math.abs(deltaY)) {
+        closeMobileMenu();
+    }
+});
+
+// Prevent menu from closing when scrolling within menu
+mobileMenu.addEventListener('touchmove', function(e) {
+    e.stopPropagation();
+});
+
+// Performance optimization: Use passive listeners where possible
+const passiveOptions = { passive: true };
+
+mobileMenu.addEventListener('scroll', function() {
+    // Handle menu scroll if needed
+}, passiveOptions);
+
+// Debug logging (remove in production)
+// if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+//     console.log('Mobile hamburger menu initialized successfully');
+// }
+// });
 
 document.addEventListener('DOMContentLoaded', function() {
     // Tab System
@@ -1240,7 +1237,9 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('  - switchTab(tabName): Switch between tabs');
     console.log('  - exportProcessFlow(format): Export as PDF or JSON');
     console.log('  - Press F1 for keyboard shortcuts');
-});// Global utility functions
+});
+
+// Global utility functions
 window.eOfficeUtils = {
     switchTab: (tabName) => {
         const event = new CustomEvent('switchTab', { detail: { tabName } });
@@ -1267,4 +1266,26 @@ window.eOfficeUtils = {
         });
     }
 };
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Mở modal khi bấm vào tất cả nút 'Liên hệ ngay' (cả #contact và #contactModal)
+  document.querySelectorAll('a.btn-primary[href="#contact"], a.btn-primary[href="#contactModal"]').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('contactModal').classList.remove('hidden');
+    });
+  });
+
+  // Đóng modal khi bấm nút đóng
+  document.getElementById('closeContactModal')?.addEventListener('click', function() {
+    document.getElementById('contactModal').classList.add('hidden');
+  });
+
+  // Đóng modal khi bấm ra ngoài (nền overlay)
+  document.getElementById('contactModal')?.addEventListener('click', function(e) {
+    if (e.target === this) {
+      this.classList.add('hidden');
+    }
+  });
+});
 

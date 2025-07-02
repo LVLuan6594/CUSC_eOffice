@@ -2617,3 +2617,20 @@ body.menu-open {
     box-shadow: none !important;
 }
 
+.contact-link {
+  transition: color 0.2s;
+  color: #000000;
+}
+.contact-link:hover {
+  color: #1d4ed8 !important;
+  text-decoration: underline;
+}
+
+/* Đảm bảo màu nổi bật ở dark mode */
+.dark .contact-link {
+  color: #000000 !important;
+}
+.dark .contact-link:hover {
+  color: #1d4ed8 !important;
+}
+
