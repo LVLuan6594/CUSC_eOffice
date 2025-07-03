@@ -2623,7 +2623,7 @@ body.menu-open {
 }
 .contact-link:hover {
   color: #1d4ed8 !important;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* Đảm bảo màu nổi bật ở dark mode */
@@ -2632,5 +2632,89 @@ body.menu-open {
 }
 .dark .contact-link:hover {
   color: #1d4ed8 !important;
+}
+
+/* Loại bỏ outline và box-shadow khi focus/active vào thẻ <a> trong footer */
+footer a:focus, footer a:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Responsive Footer */
+@media (max-width: 1024px) {
+  footer .grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  footer .flex-col.items-end {
+    align-items: center !important;
+  }
+  footer .counter-box {
+    width: 100% !important;
+    max-width: 350px !important;
+    margin: 0 auto !important;
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    padding-top: 2rem !important;
+    padding-bottom: 1rem !important;
+  }
+  footer .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  footer .flex-col.items-start {
+    align-items: center !important;
+    text-align: center !important;
+  }
+  footer .flex-col.items-end {
+    align-items: center !important;
+    text-align: center !important;
+  }
+  footer img[alt="CUSC Logo"] {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer .space-y-2 {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  footer .counter-box {
+    width: 100% !important;
+    max-width: 350px !important;
+    margin: 0 auto !important;
+  }
+  footer .flex.flex-row.gap-8 {
+    gap: 2rem !important;
+  }
+  footer .w-14.h-14 {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+  footer h5, footer p, footer span, footer a {
+    font-size: 1rem !important;
+  }
+}
+@media (max-width: 480px) {
+  footer {
+    padding-top: 1rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  footer .w-14.h-14 {
+    width: 2rem !important;
+    height: 2rem !important;
+  }
+  footer .counter-box {
+    max-width: 98vw !important;
+    padding: 0 !important;
+  }
+  footer .counter-content {
+    padding: 1rem !important;
+  }
+  footer h5, footer p, footer span, footer a {
+    font-size: 0.95rem !important;
+  }
 }
 
