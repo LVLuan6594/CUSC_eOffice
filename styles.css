@@ -82,6 +82,49 @@ section {
 .dark #technical {
   background: var(--bg-dark);
 }
+/* Accent màu cam (giống text trong hình) */
+.text-accent {
+  color: #f97316; /* Tailwind orange-500 */
+}
+
+/* Hiệu ứng nổi/bounce */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.animate-bounce-slow {
+  animation: bounce-slow 4s ease-in-out infinite;
+}
+
+/* Nút social có hiệu ứng hover */
+.magnetic-button {
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.magnetic-button:hover {
+  transform: scale(1.1);
+  background: rgba(255,255,255,0.15);
+}
+
+/* Counter số chạy animation */
+.counter {
+  transition: all 0.5s ease;
+}
+
+/* Footer gradient backup (phòng trường hợp không dùng Tailwind) */
+footer#contact {
+  background: linear-gradient(135deg, #0f172a, #1e3a8a, #312e81);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
 
 /* Xóa các background gradient cũ */
 body {
