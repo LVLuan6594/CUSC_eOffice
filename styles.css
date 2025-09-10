@@ -140,6 +140,10 @@ body {
   background: var(--bg-dark);
   color: #e2e8f0;
 }
+a:focus, a:active, img:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
 
 /* Dark mode */
 .dark body {
