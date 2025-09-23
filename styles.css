@@ -125,7 +125,12 @@ footer#contact {
   position: relative;
   overflow: hidden;
 }
-
+.footer-logo {
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 /* Xóa các background gradient cũ */
 body {
   background: var(--bg-light);
